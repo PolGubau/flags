@@ -1,33 +1,53 @@
-# The events on GitHub that will cause the workflow to be executed.
-on: [pull_request]
+name: Publish Flags Package
 
-# The name of the workflow to be displayed on the repository's actions page.
-name: Build and Test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
-# A list of the jobs that will run during the workflow. Each job runs
-# independently of the others and on different virtual environments.
-# We have a single job, which:
-# 1. Runs `npm ci` to install the dependencies in the icon library.
-# 2. Runs `npm run build` to build the icon library.
-# 3. Runs `npm test` to run the tests.
 jobs:
-  build-and-test:
-    name: Build and Test
+  publish:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
     steps:
-      - uses: actions/checkout@v2
-      # GitHub action for Node.JS.
-      # https://github.com/actions/setup-node
-      - uses: actions/setup-node@v2
+      # Checkout el código
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Configura Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.13.2"
-          check-latest: true
-      # Run `npm ci` in the icon library.
+          node-version: 16
+          cache: "npm"
+
+      # Instala dependencias
       - name: Install dependencies
-        run: npm ci
-      # Next build the icon library.
-      - name: Build the icon library
-        run: npm run build
-      # Lastly, run the tests.
-      - name: Run tests
-        run: npm test
+        run: npm install
+
+      # Verifica si el paquete necesita publicación
+      - name: Check for changes in the package
+        id: check_package
+        run: |
+          echo "Checking if the package should be published..."
+          CHANGED=$(git diff --name-only HEAD^ HEAD | grep "packages/flags")
+          if [ -z "$CHANGED" ]; then
+            echo "No changes in the flags package. Skipping publish."
+            exit 0
+          fi
+
+      # Compila el paquete
+      - name: Build the package
+        run: npm run build --workspace=packages/flags
+
+      # Publica en NPM
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --workspace=packages/flags

@@ -36,7 +36,7 @@ const transform = async (
  * @returns {Promise<{ svg: string, componentName: string }[]>}
  */
 const getIcons = async (
-    style: "solid" | "outline",
+    style: "flags",
 ): Promise<{ svg: string; componentName: string }[]> => {
     // The files from the directory that corresponds to the specified style.
     const files = await fs.readdir(`./optimized/${style}`);
@@ -75,7 +75,7 @@ const exportAll = (icons: { svg: string; componentName: string }[]): string => {
  *
  * @param {"solid"|"outline"} style The style of icon to build.
  */
-const buildIcons = async (style: "solid" | "outline") => {
+const buildIcons = async (style: "flags") => {
     // The output directory is the style of the icon at the room of the
     // project.
     const outDir = `./${style}`;
@@ -112,11 +112,8 @@ const main = () => {
      * Remove the previously built icons and run the build script to rebuild
      * the icons.
      */
-    Promise.all([
-        rimrafPromisified("./outline/*"),
-        rimrafPromisified("./solid/*"),
-    ])
-        .then(() => Promise.all([buildIcons("solid"), buildIcons("outline")]))
+    Promise.all([rimrafPromisified("./flags/*")])
+        .then(() => Promise.all([buildIcons("flags")]))
         .then(() => console.log("Finished building icons."));
 };
 

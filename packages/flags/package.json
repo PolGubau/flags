@@ -3,12 +3,12 @@
     "version": "1.0.0",
     "license": "MIT",
     "files": [
-        "outline/"
+        "flags/"
     ],
     "scripts": {
         "prepublishOnly": "npm run build",
-        "build": "npm run build-outline && ts-node ./scripts/build.ts",
-        "build-outline": "rimraf ./outline ./optimized/outline && svgo --config ./svgo.outline.config.js -f ./src/outline -o ./optimized/outline --pretty --indent=2",
+        "build": "npm run build-flags && ts-node ./scripts/build.ts",
+        "build-flags": "rimraf ./flags ./optimized/flags && svgo --config ./svgo.flags.config.js -f ./src/flags -o ./optimized/flags --pretty --indent=2",
         "test": "npm run build && jest"
     },
     "devDependencies": {
