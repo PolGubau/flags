@@ -1,5 +1,5 @@
 # The events on GitHub that will cause the workflow to be executed.
-on: [pull_request]
+on: [pull_request, push]
 
 # The name of the workflow to be displayed on the repository's actions page.
 name: Build and Test
