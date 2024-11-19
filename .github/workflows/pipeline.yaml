@@ -3,10 +3,10 @@ name: Publish Flags Package
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   publish:
@@ -20,16 +20,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Configura Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: "npm"
+      # Instala pnpm
+      - name: Setup pnpm
+        run: |
+          npm install -g pnpm
 
-      # Instala dependencias
+      # Instala dependencias del monorepo
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       # Verifica si el paquete necesita publicación
       - name: Check for changes in the package
@@ -44,10 +42,10 @@ jobs:
 
       # Compila el paquete
       - name: Build the package
-        run: npm run build --workspace=packages/flags
+        run: pnpm run --filter packages/flags build
 
       # Publica en NPM
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --workspace=packages/flags
+        run: pnpm publish packages/flags --access public
