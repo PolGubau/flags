@@ -16,9 +16,11 @@ jobs:
       contents: read
 
     steps:
-      # Checkout el código
+      # Checkout el código con historial suficiente
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       # Instala pnpm
       - name: Setup pnpm
