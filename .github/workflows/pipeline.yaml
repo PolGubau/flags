@@ -31,21 +31,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Verifica si el paquete necesita publicación
-      - name: Check for changes in the package
-        id: check_package
-        run: |
-          echo "Checking if the package should be published..."
-          if git rev-parse HEAD^ >/dev/null 2>&1; then
-            CHANGED=$(git diff --name-only HEAD^ HEAD | grep "packages/flags")
-            if [ -z "$CHANGED" ]; then
-              echo "No changes in the flags package. Skipping publish."
-              exit 0
-            fi
-          else
-            echo "HEAD^ does not exist, assuming changes in the flags package."
-          fi
-
       # Compila el paquete
       - name: Build the package
         run: pnpm run --filter packages/flags build
