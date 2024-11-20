@@ -41,13 +41,16 @@ const getIcons = async (
     // The files from the directory that corresponds to the specified style.
     const files = await fs.readdir(`./optimized/${style}`);
 
+    // dont include __jest-test.svg
+    const filteredFiles = files.filter((file) => file !== "__jest-test.svg");
+
     // Reads each file to get the code and name of the SVG.
     return Promise.all(
-        files.map(async (file) => ({
+        filteredFiles.map(async (file) => ({
             svg: await fs.readFile(`./optimized/${style}/${file}`, "utf8"),
             componentName: `${camelcase(file.replace(/\.svg$/, ""), {
                 pascalCase: true,
-            })}Icon`,
+            })}Flag`,
         })),
     );
 };
@@ -60,20 +63,26 @@ const getIcons = async (
  * @returns {string} Returns the string to use for the index file.
  */
 const exportAll = (icons: { svg: string; componentName: string }[]): string => {
-    return icons
-        .map(({ componentName }) => {
-            return `export { default as ${componentName} } from "./${componentName}";`;
-        })
-        .join("\n");
+    // export { ArFlag, ...
+    return `
+export { ${icons.map(({ componentName }) => `${componentName}`).join(", ")} };`;
 };
 
+const importAll = (icons: { svg: string; componentName: string }[]): string => {
+    // get all flags from their files
+    return icons
+        .map(
+            ({ componentName }) =>
+                `import { default as ${componentName}} from "./${componentName}";`,
+        )
+        .join("\n");
+};
 /**
  * Creates the directories for the icons, converts them from SVG to React
  * components, and write them to their directories.
  *
  * @async
  *
- * @param {"solid"|"outline"} style The style of icon to build.
  */
 const buildIcons = async (style: "flags") => {
     // The output directory is the style of the icon at the room of the
@@ -99,7 +108,33 @@ const buildIcons = async (style: "flags") => {
     );
 
     // Write the `index` file that exports all of the icons for that style.
-    await fs.writeFile(`${outDir}/index.tsx`, exportAll(icons), "utf8");
+    await fs.writeFile(
+        `${outDir}/index.tsx`,
+
+        `
+import React from "react";
+        ${importAll(icons)}    
+
+        ${exportAll(icons)}
+    
+enum FlagsCodesEnum {
+    ${icons.map(({ componentName }) => `${componentName} = "${componentName}"`).join(",\n")}
+}
+
+type FlagCode = keyof typeof FlagsCodesEnum;
+         
+
+const FlagsCodes: Record<FlagCode, React.FC<React.SVGProps<SVGSVGElement>>> = {
+    ${icons.map(({ componentName }) => `${componentName}: ${componentName}`).join(",\n")}
+};
+ 
+export const Flag = ({code, props = {}}: { code: FlagCode, props?: React.SVGProps<SVGSVGElement> }) => {
+    const Component = FlagsCodes[code];
+    return <Component {...props} />;
+};
+`,
+        "utf8",
+    );
 };
 
 /**
