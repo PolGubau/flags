@@ -1,51 +1,36 @@
-## <!--  -->
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-![React](https://img.shields.io/badge/-react-000?style=for-the-badge&logo=react)
-![TailwindCSS](https://img.shields.io/badge/-tailwindcss-000?style=for-the-badge&logo=tailwindcss)
-![GSAP](https://img.shields.io/badge/-gsap-000?style=for-the-badge&logo=greensock)
-![Next.js](https://img.shields.io/badge/-Next.js-000?style=for-the-badge&logo=next.js)
-![Vercel](https://img.shields.io/badge/-Vercel-000?style=for-the-badge&logo=vercel&logoColor=000080)
-![Prismic](https://img.shields.io/badge/prismic-000?style=for-the-badge&logo=prismic)
+## Getting Started
 
-# Glisten AI Remade 🌐
+First, run the development server:
 
-![GitHub](https://img.shields.io/github/forks/anuja-rahul/glisten-ai-remade?style=for-the-badge&logo=github)
-&nbsp;&nbsp;
-![GitHub](https://img.shields.io/github/license/anuja-rahul/glisten-ai-remade?style=for-the-badge&logo=github)
-&nbsp;&nbsp;
-![GitHub](https://img.shields.io/github/stars/anuja-rahul/glisten-ai-remade?style=for-the-badge&logo=github)
-&nbsp;&nbsp;
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-#### Demo Glisten AI homepage remade based on a tutorial using Prismic, React, Next.js, Tailwind CSS, and GSAP.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Visit Us: [https://glisten-ai-remade.vercel.app/](https://glisten-ai-remade.vercel.app/)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-<div style="text-align:center;">
-  <img src="docs/hero.png" alt="Image Description" width="500" style="align-items:center;">
-</div>
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-- [x] Module setup
-- [x] Tailwind config
-- [x] Header
-- [x] Footer
-- [x] Hero Section
-- [x] Bento Section
-- [x] Showcase Section
-- [x] Case Study Section
-- [x] Case Study pages (Nike/Prismic)
-- [x] Integration Section
-- [x] Call To Action Section
-- [x] Mobile NavBar
-- [x] Hero section animations
-- [x] StartGrid animations
-- [x] Showcase section animations
-- [x] Integrations section animations
-- [x] Testing and deployment
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuja-rahul&repo=glisten-ai-remade&theme=nightowl)
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

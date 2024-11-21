@@ -27,17 +27,18 @@
     "build": "turbo run build",
     "format": "prettier --write .",
     "--------------------------------------------------------------- FILTERS ---------": "---------------------------------------------",
-    "flags": "pnpm --filter pol-flags",
-    "web-docs": "pnpm --filter pol-ui-docs",
+    "flags": "pnpm --filter react-beauty-flags",
+    "landing": "pnpm --filter flags-landing",
     "--------------------------------------------------------------- FLAGS ---------": "---------------------------------------------",
     "storybook": "pnpm flags storybook",
     "flags:test": "pnpm flags test",
     "flags:build": "pnpm flags build",
+    "flags:watch": "pnpm flags build-watch",
     "flags:lint": "pnpm flags lint",
     "flags:coverage": "pnpm flags test:coverage",
     "--------------------------------------------------------------- DOCS ---------": "---------------------------------------------",
-    "docs:dev": "pnpm web-docs dev",
-    "build:docs": "pnpm web-docs build",
+    "docs:dev": "pnpm landing dev",
+    "build:docs": "pnpm landing build",
     "--------------------------------------------------------------- EXTRA ---------": "---------------------------------------------",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
@@ -48,7 +49,7 @@
     "prepare": "husky install",
     "check": "turbo lint typecheck format:check",
     "test": "turbo run test --force",
-    "open:ide": "pnpm i && pnpm flag storybook"
+    "open:ide": "pnpm i && pnpm flags build && pnpm landing dev"
   },
   "lint-staged": {
     "**/*.{js,ts,tsx}": [

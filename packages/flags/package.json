@@ -1,15 +1,19 @@
 {
     "name": "react-beauty-flags",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "files": [
-        "flags/"
+        "dist/"
     ],
     "scripts": {
         "prepublishOnly": "npm run build",
-        "build": "npm run build-flags && ts-node ./scripts/build.ts",
-        "build-flags": "rimraf ./flags ./optimized/flags && svgo --config ./svgo.flags.config.js -f ./src/flags -o ./optimized/flags --pretty --indent=2",
-        "test": "npm run build && jest"
+        "prebuild": "rimraf ./dist",
+        "build": "npm run build-flags && ts-node ./scripts/build.ts && tsc --outDir dist",
+        "build-flags": "rimraf ./src/flags ./optimized/flags && svgo --config ./svgo.flags.config.js -f ./resources/flags -o ./optimized --pretty --indent=2",
+        "test": "npm run build && jest",
+        "build-watch": "npm run build-flags && tsc -w"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.16.11",
@@ -30,5 +34,8 @@
         "ts-jest": "^27.1.3",
         "ts-node": "^10.5.0",
         "typescript": "^4.5.5"
+    },
+    "peerDependencies": {
+        "react": "^17.0.2 || ^18.0.0"
     }
 }

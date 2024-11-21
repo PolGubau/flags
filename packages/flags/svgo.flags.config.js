@@ -5,9 +5,10 @@ module.exports = {
     plugins: [
         // Sorts element attributes for readability.
         "sortAttrs",
-        // Removes `width` and `height` attributes and adds `viewBox` if 
+        // Removes `width` and `height` attributes and adds `viewBox` if
         // missing.
         "removeDimensions",
+
         // Removes the `stroke` attribute.
         {
             name: "removeAttrs",
@@ -21,10 +22,10 @@ module.exports = {
             params: {
                 attributes: [
                     {
-                        stroke: "currentColor"
+                        stroke: "currentColor",
                     },
                     {
-                        "aria-hidden": true
+                        "aria-hidden": true,
                     },
                 ],
             },

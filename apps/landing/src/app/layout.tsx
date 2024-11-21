@@ -1,36 +1,39 @@
-import "./globals.css";
-import { DM_Sans } from "next/font/google";
-import { PrismicPreview } from "@prismicio/next";
-import { repositoryName } from "@/prismicio";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next"
+import localFont from "next/font/local"
 
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import "./globals.css"
+import Providers from "@/components/providers"
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-dm-sans",
-});
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+})
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+})
+
+export const metadata: Metadata = {
+  title: "React Beauty Flags",
+  description: "Fancy flags from around the world",
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable}`}>
-      <body className="bg-[#070815] text-white">
-        <Header />
-        <main>
+    <html lang="en">
+      <Providers>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
           {children}
-          <Analytics />
-          <SpeedInsights />
-        </main>
-        <Footer />
-      </body>
-      <PrismicPreview repositoryName={repositoryName} />
+        </body>
+      </Providers>
     </html>
-  );
+  )
 }
