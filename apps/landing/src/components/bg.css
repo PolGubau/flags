@@ -1,0 +1,299 @@
+:root {
+  --color-primary: #ffc107;
+  --color-secondary: #ff99001a;
+  --color-tertiary: #ff562262;
+  --color-quaternary: #ecd38031;
+}
+.rainbow {
+  /* height: 30dvh; */
+  width: 0;
+  top: 0;
+  position: absolute;
+  transform: rotate(10deg);
+  transform-origin: top right;
+  z-index: -1;
+}
+.rainbow:nth-child(1) {
+  height: 10dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-tertiary),
+    0 0 50px 25px var(--color-primary),
+    50px 0 50px 25px var(--color-quaternary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 63.7s linear infinite slide;
+  animation-delay: -2.6s;
+}
+.rainbow:nth-child(2) {
+  height: 20dvh;
+
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-primary),
+    0 0 50px 25px var(--color-tertiary),
+    50px 0 50px 25px var(--color-quaternary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 62.4s linear infinite slide;
+  animation-delay: -5.2s;
+}
+.rainbow:nth-child(3) {
+  height: 18dvh;
+
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-tertiary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-primary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 61.1s linear infinite slide;
+  animation-delay: -7.8s;
+}
+.rainbow:nth-child(4) {
+  height: 16dvh;
+
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-quaternary),
+    0 0 50px 25px var(--color-primary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 59.8s linear infinite slide;
+  animation-delay: -10.4s;
+}
+.rainbow:nth-child(5) {
+  height: 15dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-primary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 58.5s linear infinite slide;
+  animation-delay: -13s;
+}
+.rainbow:nth-child(6) {
+  height: 12dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-tertiary),
+    0 0 50px 25px var(--color-primary),
+    50px 0 50px 25px var(--color-quaternary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 57.2s linear infinite slide;
+  animation-delay: -15.6s;
+}
+.rainbow:nth-child(7) {
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-primary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 55.9s linear infinite slide;
+  animation-delay: -18.2s;
+}
+.rainbow:nth-child(8) {
+  height: 18dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-tertiary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-primary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 54.6s linear infinite slide;
+  animation-delay: -20.8s;
+}
+.rainbow:nth-child(9) {
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-primary),
+    0 0 50px 25px var(--color-tertiary),
+    50px 0 50px 25px var(--color-quaternary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 53.3s linear infinite slide;
+  animation-delay: -23.4s;
+}
+.rainbow:nth-child(10) {
+  height: 10dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-tertiary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-primary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 52s linear infinite slide;
+  animation-delay: -26s;
+}
+.rainbow:nth-child(11) {
+  height: 20dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-primary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 50.7s linear infinite slide;
+  animation-delay: -28.6s;
+}
+.rainbow:nth-child(12) {
+  height: 12dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-quaternary),
+    0 0 50px 25px var(--color-tertiary),
+    50px 0 50px 25px var(--color-primary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 49.4s linear infinite slide;
+  animation-delay: -31.2s;
+}
+.rainbow:nth-child(13) {
+  height: 21dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-primary),
+    0 0 50px 25px var(--color-tertiary),
+    50px 0 50px 25px var(--color-quaternary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 48.1s linear infinite slide;
+  animation-delay: -33.8s;
+}
+.rainbow:nth-child(14) {
+  height: 17dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-tertiary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-primary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 46.8s linear infinite slide;
+  animation-delay: -36.4s;
+}
+.rainbow:nth-child(15) {
+  height: 14dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-quaternary),
+    0 0 50px 25px var(--color-primary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 45.5s linear infinite slide;
+  animation-delay: -39s;
+}
+.rainbow:nth-child(16) {
+  height: 10dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-tertiary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-primary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 44.2s linear infinite slide;
+  animation-delay: -41.6s;
+}
+.rainbow:nth-child(17) {
+  height: 5dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-quaternary),
+    0 0 50px 25px var(--color-primary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 42.9s linear infinite slide;
+  animation-delay: -44.2s;
+}
+.rainbow:nth-child(18) {
+  height: 23dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-tertiary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-primary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 41.6s linear infinite slide;
+  animation-delay: -46.8s;
+}
+.rainbow:nth-child(19) {
+  height: 16dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-tertiary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-primary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 40.3s linear infinite slide;
+  animation-delay: -49.4s;
+}
+.rainbow:nth-child(20) {
+  height: 12dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-quaternary),
+    0 0 50px 25px var(--color-tertiary),
+    50px 0 50px 25px var(--color-primary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 39s linear infinite slide;
+  animation-delay: -52s;
+}
+.rainbow:nth-child(21) {
+  height: 10dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-primary),
+    0 0 50px 25px var(--color-tertiary),
+    50px 0 50px 25px var(--color-quaternary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 37.7s linear infinite slide;
+  animation-delay: -54.6s;
+}
+.rainbow:nth-child(22) {
+  height: 16dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-quaternary),
+    0 0 50px 25px var(--color-primary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 36.4s linear infinite slide;
+  animation-delay: -57.2s;
+}
+.rainbow:nth-child(23) {
+  height: 14dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-primary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 35.1s linear infinite slide;
+  animation-delay: -59.8s;
+}
+.rainbow:nth-child(24) {
+  height: 23dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-quaternary),
+    0 0 50px 25px var(--color-primary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 33.8s linear infinite slide;
+  animation-delay: -62.4s;
+}
+.rainbow:nth-child(25) {
+  height: 18dvh;
+  box-shadow:
+    -130px 0 80px 40px var(--color-secondary),
+    -50px 0 50px 25px var(--color-primary),
+    0 0 50px 25px var(--color-quaternary),
+    50px 0 50px 25px var(--color-tertiary),
+    130px 0 80px 40px var(--color-secondary);
+  animation: 32.5s linear infinite slide;
+  animation-delay: -65s;
+}
+@keyframes slide {
+  from {
+    right: -25vw;
+  }
+  to {
+    right: 125vw;
+  }
+}

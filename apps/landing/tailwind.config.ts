@@ -7,13 +7,5 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "node_modules/pol-ui/lib/**/*.js",
   ],
-  // theme: {
-  //   extend: {
-  //     colors: {
-  //       background: "var(--background)",
-  //       foreground: "var(--foreground)",
-  //     },
-  //   },
-  // },
   plugins: [poluiPlugin()],
 } satisfies Config
