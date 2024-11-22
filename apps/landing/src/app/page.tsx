@@ -19,7 +19,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 items-center justify-center">
         {/*  */}
 
-        <div className="flex gap-10 text-background-50">
+        <div className="flex gap-10 text-secondary-50">
           <GbFlag className="w-[40px] pb-4" />
           <EsFlag className=" h-[70px] pb-2 " />
           <BrFlag className=" h-[30px] pb-2" />
@@ -32,20 +32,21 @@ export default function Home() {
           <h2 className="text-lg">Fancy flags from around the world</h2>
         </hgroup>
 
-        <div className="bg-red-300">
-          <CopySnippet />
-        </div>
+        <CopySnippet />
 
-        <ul className="grid grid-cols-6 gap-4">
+        <ul className="grid grid-cols-6 gap-4 ">
           {Object.keys(FlagsCodesEnum).map((flagCode) => (
             <li key={flagCode}>
-              <Flag
-                code={flagCode as FlagCode}
-                props={{
-                  width: 45,
-                  height: 40,
-                }}
-              />
+              <div className="text-secondary-50">
+                <Flag
+                  code={flagCode as FlagCode}
+                  props={{
+                    className: "w-full h-full p-0",
+                    width: 55,
+                    height: 40,
+                  }}
+                />
+              </div>
               {flagCode}
             </li>
           ))}

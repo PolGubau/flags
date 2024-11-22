@@ -1,15 +1,14 @@
 :root {
-  --color-primary: #ffc107;
-  --color-secondary: #ff99001a;
-  --color-tertiary: #ff562262;
-  --color-quaternary: #ecd38031;
+  --color-primary: #c4b68d00;
+  --color-secondary: #8c00ff21;
+  --color-tertiary: #a28ce540;
+  --color-quaternary: #d8006c18;
 }
 .rainbow {
-  /* height: 30dvh; */
   width: 0;
   top: 0;
   position: absolute;
-  transform: rotate(10deg);
+  transform: rotate(20deg);
   transform-origin: top right;
   z-index: -1;
 }
