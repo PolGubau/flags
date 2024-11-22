@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "next": "15.0.3",
+    "pol-ui": "^2.1.105",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-beauty-flags": "workspace:*",
     "react-dom": "19.0.0-rc-66855b96-20241106"
