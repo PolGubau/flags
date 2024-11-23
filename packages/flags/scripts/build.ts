@@ -169,7 +169,12 @@ const main = () => {
      * the icons.
      */
     Promise.all([rimrafPromisified("./src/flags/*")])
-        .then(() => Promise.all([buildIcons("src/flags"), createSrcIndex()]))
+        .then(() =>
+            Promise.all([
+                buildIcons("src/flags"),
+                // createSrcIndex()
+            ]),
+        )
         .then(() => console.log("Finished building icons."));
 };
 

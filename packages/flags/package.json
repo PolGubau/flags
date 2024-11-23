@@ -8,6 +8,7 @@
         "dist/"
     ],
     "scripts": {
+        "get-figma": "ts-node ./scripts/getFromFigma.ts",
         "prepublishOnly": "npm run build",
         "prebuild": "rimraf ./dist",
         "build": "npm run build-flags && ts-node ./scripts/build.ts && tsc --outDir dist",
@@ -37,5 +38,8 @@
     },
     "peerDependencies": {
         "react": "^17.0.2 || ^18.0.0"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5"
     }
 }
