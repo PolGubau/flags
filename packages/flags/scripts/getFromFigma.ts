@@ -7,7 +7,7 @@ dotenv.config();
 
 // Figma API constants
 const FIGMA_API_BASE = "https://api.figma.com/v1";
-const OUTPUT_DIR = path.resolve(__dirname, "../resources/flags2");
+const OUTPUT_DIR = path.resolve(__dirname, "../resources/flags");
 
 // Retrieve the API token and file key from environment variables
 const FIGMA_API_TOKEN = process.env.FIGMA_TOKEN;
@@ -71,16 +71,31 @@ const exportFlags = async () => {
     console.log("Fetching Figma file data...");
     const fileData = await fetchFigmaFile(FIGMA_FILE_KEY);
 
-    // Find the "flags" frame
-    const flagsFrame = fileData.document.children.find(
-        (page: any) => page.name === "flags" && page.type === "FRAME",
+    // Find the "Flags" page
+    const flagsPage = fileData.document.children.find(
+        (page: any) => page.name === "Flags" && page.type === "CANVAS",
     );
 
-    if (!flagsFrame) {
-        console.error('"flags" frame not found!');
+    if (!flagsPage) {
+        console.error('"Flags" page not found!');
         return;
     }
 
+    console.log(`Found page: ${flagsPage.name}`);
+
+    // Find the "flags" frame within the "Flags" page
+    const flagsFrame = flagsPage.children.find(
+        (frame: any) => frame.name === "flags" && frame.type === "FRAME",
+    );
+
+    if (!flagsFrame) {
+        console.error('"flags" frame not found within the "Flags" page!');
+        return;
+    }
+
+    console.log(`Found frame: ${flagsFrame.name}`);
+
+    // Access the children of the "flags" frame (the components)
     const components = flagsFrame.children || [];
     console.log(`Found ${components.length} components in "flags".`);
 

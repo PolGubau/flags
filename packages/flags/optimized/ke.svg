@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" stroke="currentColor" aria-hidden="true">
+  <g clip-path="url(#clip0_5_890)">
+    <rect width="28" height="20" fill="white" rx="2"/>
+    <path fill="#4C4C4C" fill-rule="evenodd" d="M0 5.33333H28V0H0V5.33333Z" clip-rule="evenodd"/>
+    <path fill="#50B500" fill-rule="evenodd" d="M0 20.0001H28V14.6667H0V20.0001Z" clip-rule="evenodd"/>
+    <path fill="white" fill-rule="evenodd" d="M0 14.6666H28V5.33325H0V14.6666Z" clip-rule="evenodd"/>
+    <path fill="#F63030" fill-rule="evenodd" d="M0 13.3334H28V6.66675H0V13.3334Z" clip-rule="evenodd"/>
+    <path fill="#F63030" fill-rule="evenodd" d="M14 16.6666C15.3333 16.6666 17.3333 14.05 17.3333 9.99992C17.3333 5.94983 15.3333 3.33325 14 3.33325C12.6666 3.33325 10.6666 5.94983 10.6666 9.99992C10.6666 14.05 12.6666 16.6666 14 16.6666Z" clip-rule="evenodd"/>
+    <mask id="mask0_5_890" width="8" height="14" x="10" y="3" maskUnits="userSpaceOnUse" style="mask-type:luminance">
+      <path fill="white" fill-rule="evenodd" d="M14 16.6666C15.3333 16.6666 17.3333 14.05 17.3333 9.99992C17.3333 5.94983 15.3333 3.33325 14 3.33325C12.6666 3.33325 10.6666 5.94983 10.6666 9.99992C10.6666 14.05 12.6666 16.6666 14 16.6666Z" clip-rule="evenodd"/>
+    </mask>
+    <g mask="url(#mask0_5_890)">
+      <path fill="#4C4C4C" fill-rule="evenodd" d="M8.66659 17.3332C10.5075 17.3332 11.9999 14.0499 11.9999 9.99984C11.9999 5.94975 10.5075 2.6665 8.66659 2.6665C6.82564 2.6665 5.33325 5.94975 5.33325 9.99984C5.33325 14.0499 6.82564 17.3332 8.66659 17.3332Z" clip-rule="evenodd"/>
+      <path fill="#4C4C4C" fill-rule="evenodd" d="M19.3333 17.3332C21.1743 17.3332 22.6667 14.0499 22.6667 9.99984C22.6667 5.94975 21.1743 2.6665 19.3333 2.6665C17.4924 2.6665 16 5.94975 16 9.99984C16 14.0499 17.4924 17.3332 19.3333 17.3332Z" clip-rule="evenodd"/>
+      <g filter="url(#filter0_d_5_890)">
+        <path fill="white" fill-rule="evenodd" d="M13.9999 7.99984C14.3681 7.99984 14.6666 6.80593 14.6666 5.33317C14.6666 3.86041 14.3681 2.6665 13.9999 2.6665C13.6317 2.6665 13.3333 3.86041 13.3333 5.33317C13.3333 6.80593 13.6317 7.99984 13.9999 7.99984ZM13.9999 11.9998C14.3681 11.9998 14.6666 11.1044 14.6666 9.99984C14.6666 8.89527 14.3681 7.99984 13.9999 7.99984C13.6317 7.99984 13.3333 8.89527 13.3333 9.99984C13.3333 11.1044 13.6317 11.9998 13.9999 11.9998ZM13.9999 11.9998C13.6317 11.9998 13.3333 13.1937 13.3333 14.6665C13.3333 16.1393 13.6317 17.3332 13.9999 17.3332C14.3681 17.3332 14.6666 16.1393 14.6666 14.6665C14.6666 13.1937 14.3681 11.9998 13.9999 11.9998Z" clip-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+  <defs>
+    <filter id="filter0_d_5_890" width="1.33337" height="15.6667" x="13.3333" y="2.6665" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="1"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+      <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_5_890"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_5_890" mode="normal" result="shape"/>
+    </filter>
+    <clipPath id="clip0_5_890">
+      <rect width="28" height="20" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
