@@ -9,6 +9,7 @@ import { default as AlFlag} from "./AlFlag";
 import { default as AmFlag} from "./AmFlag";
 import { default as AnFlag} from "./AnFlag";
 import { default as AoFlag} from "./AoFlag";
+import { default as AqFlag} from "./AqFlag";
 import { default as ArFlag} from "./ArFlag";
 import { default as AtFlag} from "./AtFlag";
 import { default as AuFlag} from "./AuFlag";
@@ -105,6 +106,7 @@ import { default as GeFlag} from "./GeFlag";
 import { default as GgFlag} from "./GgFlag";
 import { default as GhFlag} from "./GhFlag";
 import { default as GiFlag} from "./GiFlag";
+import { default as GlFlag} from "./GlFlag";
 import { default as GmFlag} from "./GmFlag";
 import { default as GnFlag} from "./GnFlag";
 import { default as GqFlag} from "./GqFlag";
@@ -232,6 +234,7 @@ import { default as UgFlag} from "./UgFlag";
 import { default as UsFlag} from "./UsFlag";
 import { default as UyFlag} from "./UyFlag";
 import { default as UzFlag} from "./UzFlag";
+import { default as VaFlag} from "./VaFlag";
 import { default as VcFlag} from "./VcFlag";
 import { default as VeFlag} from "./VeFlag";
 import { default as VgFlag} from "./VgFlag";
@@ -245,7 +248,7 @@ import { default as ZmFlag} from "./ZmFlag";
 import { default as ZwFlag} from "./ZwFlag";    
 
         
-export { AdFlag, AeFlag, AfFlag, AgFlag, AiFlag, AlFlag, AmFlag, AnFlag, AoFlag, ArFlag, AtFlag, AuFlag, AwFlag, AxFlag, AzFlag, BaFlag, BbFlag, BdFlag, BeFlag, BfFlag, BgFlag, BhFlag, BiFlag, BjFlag, BmFlag, BnFlag, BoFlag, BrFlag, BsFlag, BtFlag, BwFlag, ByFlag, BzFlag, CaFlag, CafFlag, CasFlag, CatFlag, CdFlag, CeuFlag, CfFlag, CgFlag, ChFlag, CiFlag, ClFlag, CmFlag, CnFlag, CnaFlag, CoFlag, CocFlag, CrFlag, CsaFlag, CuFlag, CvFlag, CyFlag, CzFlag, DeFlag, DjFlag, DkFlag, DmFlag, DoFlag, DzFlag, EcFlag, EeFlag, EgFlag, ErFlag, EsFlag, EsAlmeriaFlag, EsAndaluciaFlag, EsAragonFlag, EsAsturiasFlag, EsBalearFlag, EsBarcelonaFlag, EsBascoFlag, EsBorgonaFlag, EsCanariasFlag, EsCantabriaFlag, EsCatalunaFlag, EsExtremaduraFlag, EsGaliciaFlag, EsGironaFlag, EsLeonFlag, EsMadridFlag, EsManchaFlag, EsMataroFlag, EsMurciaFlag, EsNavarraFlag, EsOurenseFlag, EsRepublicaFlag, EsRiojaFlag, EsTarragonaFlag, EsValenciaFlag, EtFlag, EuFlag, FiFlag, FjFlag, FkFlag, FmFlag, FrFlag, GaFlag, GbFlag, GdFlag, GeFlag, GgFlag, GhFlag, GiFlag, GmFlag, GnFlag, GqFlag, GrFlag, GtFlag, GwFlag, GyFlag, HkFlag, HnFlag, HrFlag, HtFlag, HuFlag, IdFlag, IeFlag, IlFlag, ImFlag, InFlag, IqFlag, IrFlag, IsFlag, ItFlag, JeFlag, JmFlag, JoFlag, JpFlag, KeFlag, KgFlag, KhFlag, KmFlag, KnFlag, KpFlag, KrFlag, KwFlag, KyFlag, KzFlag, LaFlag, LbFlag, LcFlag, LgtbFlag, LiFlag, LkFlag, LrFlag, LsFlag, LtFlag, LuFlag, LvFlag, LyFlag, MaFlag, McFlag, MdFlag, MeFlag, MgFlag, MkFlag, MlFlag, MmFlag, MnFlag, MoFlag, MrFlag, MsFlag, MtFlag, MuFlag, MvFlag, MwFlag, MxFlag, MyFlag, MzFlag, NaFlag, NeFlag, NgFlag, NiFlag, NlFlag, NoFlag, NpFlag, NzFlag, OmFlag, PaFlag, PeFlag, PfFlag, PgFlag, PhFlag, PkFlag, PlFlag, PrFlag, PtFlag, PwFlag, PyFlag, QaFlag, RoFlag, RsFlag, RuFlag, RwFlag, SaFlag, SbFlag, ScFlag, SdFlag, SeFlag, SgFlag, ShFlag, SiFlag, SkFlag, SlFlag, SmFlag, SnFlag, SoFlag, SrFlag, StFlag, SvFlag, SyFlag, SzFlag, TcFlag, TdFlag, TgFlag, ThFlag, TjFlag, TlFlag, TmFlag, TnFlag, ToFlag, TrFlag, TtFlag, TwFlag, TzFlag, UaFlag, UgFlag, UsFlag, UyFlag, UzFlag, VcFlag, VeFlag, VgFlag, VnFlag, VuFlag, WsFlag, WwFlag, YeFlag, ZaFlag, ZmFlag, ZwFlag };
+export { AdFlag, AeFlag, AfFlag, AgFlag, AiFlag, AlFlag, AmFlag, AnFlag, AoFlag, AqFlag, ArFlag, AtFlag, AuFlag, AwFlag, AxFlag, AzFlag, BaFlag, BbFlag, BdFlag, BeFlag, BfFlag, BgFlag, BhFlag, BiFlag, BjFlag, BmFlag, BnFlag, BoFlag, BrFlag, BsFlag, BtFlag, BwFlag, ByFlag, BzFlag, CaFlag, CafFlag, CasFlag, CatFlag, CdFlag, CeuFlag, CfFlag, CgFlag, ChFlag, CiFlag, ClFlag, CmFlag, CnFlag, CnaFlag, CoFlag, CocFlag, CrFlag, CsaFlag, CuFlag, CvFlag, CyFlag, CzFlag, DeFlag, DjFlag, DkFlag, DmFlag, DoFlag, DzFlag, EcFlag, EeFlag, EgFlag, ErFlag, EsFlag, EsAlmeriaFlag, EsAndaluciaFlag, EsAragonFlag, EsAsturiasFlag, EsBalearFlag, EsBarcelonaFlag, EsBascoFlag, EsBorgonaFlag, EsCanariasFlag, EsCantabriaFlag, EsCatalunaFlag, EsExtremaduraFlag, EsGaliciaFlag, EsGironaFlag, EsLeonFlag, EsMadridFlag, EsManchaFlag, EsMataroFlag, EsMurciaFlag, EsNavarraFlag, EsOurenseFlag, EsRepublicaFlag, EsRiojaFlag, EsTarragonaFlag, EsValenciaFlag, EtFlag, EuFlag, FiFlag, FjFlag, FkFlag, FmFlag, FrFlag, GaFlag, GbFlag, GdFlag, GeFlag, GgFlag, GhFlag, GiFlag, GlFlag, GmFlag, GnFlag, GqFlag, GrFlag, GtFlag, GwFlag, GyFlag, HkFlag, HnFlag, HrFlag, HtFlag, HuFlag, IdFlag, IeFlag, IlFlag, ImFlag, InFlag, IqFlag, IrFlag, IsFlag, ItFlag, JeFlag, JmFlag, JoFlag, JpFlag, KeFlag, KgFlag, KhFlag, KmFlag, KnFlag, KpFlag, KrFlag, KwFlag, KyFlag, KzFlag, LaFlag, LbFlag, LcFlag, LgtbFlag, LiFlag, LkFlag, LrFlag, LsFlag, LtFlag, LuFlag, LvFlag, LyFlag, MaFlag, McFlag, MdFlag, MeFlag, MgFlag, MkFlag, MlFlag, MmFlag, MnFlag, MoFlag, MrFlag, MsFlag, MtFlag, MuFlag, MvFlag, MwFlag, MxFlag, MyFlag, MzFlag, NaFlag, NeFlag, NgFlag, NiFlag, NlFlag, NoFlag, NpFlag, NzFlag, OmFlag, PaFlag, PeFlag, PfFlag, PgFlag, PhFlag, PkFlag, PlFlag, PrFlag, PtFlag, PwFlag, PyFlag, QaFlag, RoFlag, RsFlag, RuFlag, RwFlag, SaFlag, SbFlag, ScFlag, SdFlag, SeFlag, SgFlag, ShFlag, SiFlag, SkFlag, SlFlag, SmFlag, SnFlag, SoFlag, SrFlag, StFlag, SvFlag, SyFlag, SzFlag, TcFlag, TdFlag, TgFlag, ThFlag, TjFlag, TlFlag, TmFlag, TnFlag, ToFlag, TrFlag, TtFlag, TwFlag, TzFlag, UaFlag, UgFlag, UsFlag, UyFlag, UzFlag, VaFlag, VcFlag, VeFlag, VgFlag, VnFlag, VuFlag, WsFlag, WwFlag, YeFlag, ZaFlag, ZmFlag, ZwFlag };
     
 export enum FlagsCodesEnum {
     AdFlag = "AdFlag",
@@ -257,6 +260,7 @@ AlFlag = "AlFlag",
 AmFlag = "AmFlag",
 AnFlag = "AnFlag",
 AoFlag = "AoFlag",
+AqFlag = "AqFlag",
 ArFlag = "ArFlag",
 AtFlag = "AtFlag",
 AuFlag = "AuFlag",
@@ -353,6 +357,7 @@ GeFlag = "GeFlag",
 GgFlag = "GgFlag",
 GhFlag = "GhFlag",
 GiFlag = "GiFlag",
+GlFlag = "GlFlag",
 GmFlag = "GmFlag",
 GnFlag = "GnFlag",
 GqFlag = "GqFlag",
@@ -480,6 +485,7 @@ UgFlag = "UgFlag",
 UsFlag = "UsFlag",
 UyFlag = "UyFlag",
 UzFlag = "UzFlag",
+VaFlag = "VaFlag",
 VcFlag = "VcFlag",
 VeFlag = "VeFlag",
 VgFlag = "VgFlag",
@@ -506,6 +512,7 @@ AlFlag: AlFlag,
 AmFlag: AmFlag,
 AnFlag: AnFlag,
 AoFlag: AoFlag,
+AqFlag: AqFlag,
 ArFlag: ArFlag,
 AtFlag: AtFlag,
 AuFlag: AuFlag,
@@ -602,6 +609,7 @@ GeFlag: GeFlag,
 GgFlag: GgFlag,
 GhFlag: GhFlag,
 GiFlag: GiFlag,
+GlFlag: GlFlag,
 GmFlag: GmFlag,
 GnFlag: GnFlag,
 GqFlag: GqFlag,
@@ -729,6 +737,7 @@ UgFlag: UgFlag,
 UsFlag: UsFlag,
 UyFlag: UyFlag,
 UzFlag: UzFlag,
+VaFlag: VaFlag,
 VcFlag: VcFlag,
 VeFlag: VeFlag,
 VgFlag: VgFlag,

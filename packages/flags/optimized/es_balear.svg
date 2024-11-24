@@ -5,8 +5,8 @@
     <path fill="#F63030" fill-rule="evenodd" d="M0 13.3333H28V11.1333H0V13.3333Z" clip-rule="evenodd"/>
     <path fill="#F63030" fill-rule="evenodd" d="M0 17.8001H28V15.6001H0V17.8001Z" clip-rule="evenodd"/>
     <path fill="#F63030" fill-rule="evenodd" d="M0 4.39995H28V2.19995H0V4.39995Z" clip-rule="evenodd"/>
-    <path fill="#0EA6FB" fill-rule="evenodd" d="M7.24792e-05 -0.56128L7.20176e-05 10L13.2178 10L13.2178 -0.561279L7.24792e-05 -0.56128Z" clip-rule="evenodd"/>
-    <rect width="7.92786" height="3.98242" x="2.64478" y="2.72815" fill="white" rx="1"/>
+    <path fill="#0EA6FB" fill-rule="evenodd" d="M-4.95911e-05 -0.56128L-5.00527e-05 10L13.2177 10L13.2177 -0.561279L-4.95911e-05 -0.56128Z" clip-rule="evenodd"/>
+    <rect width="7.92786" height="3.98242" x="2.6449" y="2.72815" fill="white" rx="1"/>
   </g>
   <defs>
     <clipPath id="clip0_8_46">

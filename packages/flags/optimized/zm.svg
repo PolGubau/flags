@@ -4,7 +4,7 @@
     <rect width="4" height="9.33333" x="24" y="10.6666" fill="#FF9600"/>
     <path fill="#4C4C4C" fill-rule="evenodd" d="M20 20H24V10.6666H20V20Z" clip-rule="evenodd"/>
     <path fill="#F63030" fill-rule="evenodd" d="M16 20H20V10.6666H16V20Z" clip-rule="evenodd"/>
-    <path stroke-linecap="round" stroke-width="2" d="M17.0493 4.0033L17.2466 4.12813C19.859 5.78137 23.1902 5.78137 25.8026 4.12813L25.9999 4.0033"/>
+    <path stroke-linecap="round" stroke-width="2" d="M17.0494 4.0033L17.2467 4.12813C19.8591 5.78137 23.1903 5.78137 25.8027 4.12813L26 4.0033"/>
   </g>
   <defs>
     <clipPath id="clip0_5_2198">

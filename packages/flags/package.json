@@ -14,6 +14,7 @@
         "build": "npm run build-flags && ts-node ./scripts/build.ts && tsc --outDir dist",
         "build-flags": "rimraf ./src/flags ./optimized/flags && svgo --config ./svgo.flags.config.js -f ./resources/flags -o ./optimized --pretty --indent=2",
         "test": "npm run build && jest",
+        "update-icons":"npm run get-figma && npm run build-flags",
         "build-watch": "npm run build-flags && tsc -w"
     },
     "devDependencies": {
