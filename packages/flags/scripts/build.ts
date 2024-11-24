@@ -23,6 +23,7 @@ const transform = async (
     svg: string,
     componentName: string,
 ): Promise<string> => {
+    // original size is 28x20
     return await svgrTransform(
         svg,
         {
@@ -30,8 +31,8 @@ const transform = async (
             titleProp: true,
             descProp: true,
             svgProps: {
-                width: "{props.width ?? 60}",
-                height: "{props.height ?? 50}",
+                width: "{props.width ?? 28}",
+                height: "{props.height ?? 20}",
             },
         },
         { componentName },
@@ -59,7 +60,7 @@ const getIcons = async (
             svg: await fs.readFile(`./optimized/${file}`, "utf8"),
             componentName: `${camelcase(file.replace(/\.svg$/, ""), {
                 pascalCase: true,
-            })}Flag`,
+            })}`,
         })),
     );
 };
@@ -134,26 +135,21 @@ export enum FlagsCodesEnum {
     ${icons.map(({ componentName }) => `${componentName} = "${componentName}"`).join(",\n")}
 }
 
-export type FlagCode = keyof typeof FlagsCodesEnum;
+export type AllFlagCode = keyof typeof FlagsCodesEnum;
          
 
-export const FlagsCodes: Record<FlagCode, React.FC<React.SVGProps<SVGSVGElement>>> = {
+export const FlagsCodes: Record<AllFlagCode, React.FC<React.SVGProps<SVGSVGElement>>> = {
     ${icons.map(({ componentName }) => `${componentName}: ${componentName}`).join(",\n")}
 };
- 
-export const Flag = ({code, props = {}}: { code: FlagCode, props?: React.SVGProps<SVGSVGElement> }) => {
+
+interface FlagProps extends React.SVGProps<SVGSVGElement> {
+    code: AllFlagCode;
+}
+export const Flag = ({ code, ...props }: FlagProps) => {
     const Component = FlagsCodes[code];
     return <Component {...props} />;
 };
 `,
-        "utf8",
-    );
-};
-
-const createSrcIndex = async () => {
-    await fs.writeFile(
-        `./src/index.ts`,
-        `export * from "./flags/index";`,
         "utf8",
     );
 };
@@ -163,18 +159,8 @@ const createSrcIndex = async () => {
  */
 const main = () => {
     console.log("Building icons...");
-
-    /**
-     * Remove the previously built icons and run the build script to rebuild
-     * the icons.
-     */
     Promise.all([rimrafPromisified("./src/flags/*")])
-        .then(() =>
-            Promise.all([
-                buildIcons("src/flags"),
-                // createSrcIndex()
-            ]),
-        )
+        .then(() => Promise.all([buildIcons("src/flags")]))
         .then(() => console.log("Finished building icons."));
 };
 

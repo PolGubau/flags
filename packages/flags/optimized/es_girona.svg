@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" stroke="currentColor" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" aria-hidden="true">
   <g clip-path="url(#clip0_8_410)">
     <rect width="28" height="20" fill="#FFDA27"/>
     <path fill="#F63030" fill-rule="evenodd" d="M15.5266 -3.4679L15.5266 23.468L18.4895 23.468L18.4895 -3.4679L15.5266 -3.4679Z" clip-rule="evenodd"/>
     <path fill="#F63030" fill-rule="evenodd" d="M9.51093 -3.4679L9.51093 23.468L12.4739 23.468L12.4739 -3.4679L9.51093 -3.4679Z" clip-rule="evenodd"/>
     <path fill="#F63030" fill-rule="evenodd" d="M3.49506 -3.4679L3.49506 23.468L6.45801 23.468L6.45801 -3.4679L3.49506 -3.4679Z" clip-rule="evenodd"/>
     <path fill="#F63030" fill-rule="evenodd" d="M21.5422 -3.4679L21.5422 23.468L24.5051 23.468L24.5051 -3.4679L21.5422 -3.4679Z" clip-rule="evenodd"/>
-    <rect width="9.87422" height="9.87422" x="14" y="2.54517" fill="white" stroke-width="0.884076" transform="rotate(45 14 2.54517)"/>
+    <rect width="9.87422" height="9.87422" x="14" y="2.54517" fill="white" stroke="#4C4C4C" stroke-width="0.884076" transform="rotate(45 14 2.54517)"/>
     <mask id="mask0_8_410" width="14" height="15" x="7" y="2" maskUnits="userSpaceOnUse" style="mask-type:alpha">
-      <rect width="4.93711" height="4.93711" x="14" y="6.03623" fill="white" stroke-width="4.93711" transform="rotate(45 14 6.03623)"/>
+      <rect width="4.93711" height="4.93711" x="14" y="6.03623" fill="white" stroke="black" stroke-width="4.93711" transform="rotate(45 14 6.03623)"/>
     </mask>
     <g mask="url(#mask0_8_410)">
       <rect width="9.87422" height="9.87422" x="14" y="2.54517" fill="white" transform="rotate(45 14 2.54517)"/>

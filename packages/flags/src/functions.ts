@@ -1,22 +1,13 @@
-import {
-    countries,
-    Country,
-    CountryCode,
-    CountryDialCode,
-    CountryName,
-} from "./countries";
+import { FlagCode, FlagName, flags } from "./metadata";
+import { FlagType } from "./types";
 
-type GetCountry = (countryCode: CountryCode) => Country | undefined;
-type GetCountryByName = (countryName: CountryName) => Country | undefined;
-type GetCountryByDial = (dial: CountryDialCode) => Country | undefined;
+export const getFlag = (v: FlagCode) =>
+    flags.find((country) => country.code === v);
 
-export const getCountry = (countryCode: CountryCode) =>
-    countries.find((country) => country.code === countryCode);
+export const getFlagByCode = getFlag;
 
-export const getCountryByCode = getCountry;
+export const getFlagByName = (v: FlagName) =>
+    flags.find((country) => country.name === v);
 
-export const getCountryByName = (n: CountryName) =>
-    countries.find((country) => country.name === n);
-
-export const getCountryByDial = (d: CountryDialCode) =>
-    countries.find((country) => country.dial_code === d);
+export const getFlagsByType = (v: FlagType) =>
+    flags.filter((country) => country.type === v);

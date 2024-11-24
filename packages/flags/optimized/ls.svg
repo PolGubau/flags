@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" stroke="currentColor" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" aria-hidden="true">
   <g clip-path="url(#clip0_5_1018)">
-    <rect width="27.5" height="19.5" x="0.25" y="0.25" fill="white" stroke-width="0.5" rx="1.75"/>
+    <rect width="27.5" height="19.5" x="0.25" y="0.25" fill="white" stroke="white" stroke-width="0.5" rx="1.75"/>
     <path fill="#0EA6FB" fill-rule="evenodd" d="M0 6.66667H28V0H0V6.66667Z" clip-rule="evenodd"/>
     <path fill="#50B500" fill-rule="evenodd" d="M0 19.9999H28V13.3333H0V19.9999Z" clip-rule="evenodd"/>
     <path fill="#4C4C4C" fill-rule="evenodd" d="M13.3334 9.99992L13.3676 9.89729C13.5702 9.28949 14.4299 9.28949 14.6325 9.89729L14.6667 9.99992L15.8484 11.7726C15.9366 11.9048 15.9172 12.0791 15.7853 12.1677C15.4916 12.3652 14.8965 12.6666 14 12.6666C13.1035 12.6666 12.5084 12.3652 12.2147 12.1677C12.0828 12.0791 12.0635 11.9048 12.1516 11.7726L13.3334 9.99992Z" clip-rule="evenodd"/>
-    <path stroke-width="0.666667" d="M15.0001 8.66659C15.0001 9.21887 14.5524 9.66659 14.0001 9.66659C13.4478 9.66659 13.0001 9.21887 13.0001 8.66659C13.0001 8.1143 13.4478 7.66659 14.0001 7.66659C14.5524 7.66659 15.0001 8.1143 15.0001 8.66659Z"/>
+    <path stroke="#4C4C4C" stroke-width="0.666667" d="M15.0001 8.66659C15.0001 9.21887 14.5524 9.66659 14.0001 9.66659C13.4478 9.66659 13.0001 9.21887 13.0001 8.66659C13.0001 8.1143 13.4478 7.66659 14.0001 7.66659C14.5524 7.66659 15.0001 8.1143 15.0001 8.66659Z"/>
   </g>
   <defs>
     <clipPath id="clip0_5_1018">

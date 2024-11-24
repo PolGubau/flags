@@ -1,11 +1,16 @@
 "use client"
 
-import React from "react"
-import { Button } from "pol-ui"
+import { Button, toast, useCopyToClipboard } from "pol-ui"
 
 const CopySnippet = () => {
+  const { copy } = useCopyToClipboard()
+  const handleClick = () => {
+    copy("pnpm i react-beauty-flags")
+    toast.success("Copied to clipboard")
+  }
+
   return (
-    <Button>
+    <Button onClick={handleClick} className="flex gap-2 items-center">
       <span className="text-white">pnpm i react-beauty-flags</span>
     </Button>
   )

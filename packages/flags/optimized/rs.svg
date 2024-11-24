@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" stroke="currentColor" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" aria-hidden="true">
   <g clip-path="url(#clip0_5_1413)">
-    <rect width="27.5" height="19.5" x="0.25" y="0.25" fill="white" stroke-width="0.5"/>
+    <rect width="27.5" height="19.5" x="0.25" y="0.25" fill="white" stroke="white" stroke-width="0.5"/>
     <path fill="#0EA6FB" fill-rule="evenodd" d="M0 13.3334H28V6.66675H0V13.3334Z" clip-rule="evenodd"/>
     <path fill="#F63030" fill-rule="evenodd" d="M0 6.66667H28V0H0V6.66667Z" clip-rule="evenodd"/>
     <path fill="white" fill-rule="evenodd" d="M6 10.0001C6 9.35503 6.34366 7.91793 6.5375 7.15865C6.61181 6.8676 6.87495 6.66675 7.17534 6.66675H10.1592C10.459 6.66675 10.7218 6.86679 10.7964 7.15719C10.9903 7.91204 11.3333 9.34028 11.3333 10.0001C11.3333 10.7451 10.833 12.7008 10.6992 13.2105C10.6777 13.2925 10.6412 13.3677 10.5872 13.4331C10.3317 13.7426 9.49918 14.6667 8.66667 14.6667C7.83364 14.6667 7.00061 13.7415 6.74565 13.4325C6.69202 13.3675 6.65559 13.2928 6.63405 13.2113C6.50018 12.7053 6 10.7635 6 10.0001Z" clip-rule="evenodd"/>
@@ -8,8 +8,8 @@
       <path fill="white" fill-rule="evenodd" d="M6 10.0001C6 9.35503 6.34366 7.91793 6.5375 7.15865C6.61181 6.8676 6.87495 6.66675 7.17534 6.66675H10.1592C10.459 6.66675 10.7218 6.86679 10.7964 7.15719C10.9903 7.91204 11.3333 9.34028 11.3333 10.0001C11.3333 10.7451 10.833 12.7008 10.6992 13.2105C10.6777 13.2925 10.6412 13.3677 10.5872 13.4331C10.3317 13.7426 9.49918 14.6667 8.66667 14.6667C7.83364 14.6667 7.00061 13.7415 6.74565 13.4325C6.69202 13.3675 6.65559 13.2928 6.63405 13.2113C6.50018 12.7053 6 10.7635 6 10.0001Z" clip-rule="evenodd"/>
     </mask>
     <g mask="url(#mask0_5_1413)">
-      <path stroke-linecap="square" stroke-width="1.33333" d="M11.3333 7.33341L5.99992 14.0001"/>
-      <path stroke-linecap="square" stroke-width="1.33333" d="M6 7.33341L11.3333 14.0001"/>
+      <path stroke="#F63030" stroke-linecap="square" stroke-width="1.33333" d="M11.3333 7.33341L5.99992 14.0001"/>
+      <path stroke="#F63030" stroke-linecap="square" stroke-width="1.33333" d="M6 7.33341L11.3333 14.0001"/>
     </g>
   </g>
   <defs>

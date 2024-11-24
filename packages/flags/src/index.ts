@@ -1,1 +1,4 @@
-export * from "./flags/index";
+export * from "./flags";
+export * from "./functions";
+export * from "./metadata";
+export * from "./types";

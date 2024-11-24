@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" stroke="currentColor" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" aria-hidden="true">
   <g clip-path="url(#clip0_5_495)">
-    <rect width="27.5" height="19.5" x="0.25" y="0.25" fill="white" stroke-width="0.5"/>
+    <rect width="27.5" height="19.5" x="0.25" y="0.25" fill="white" stroke="white" stroke-width="0.5"/>
     <path fill="#4C4C4C" fill-rule="evenodd" d="M0 13.3334H28V6.66675H0V13.3334Z" clip-rule="evenodd"/>
     <path fill="#0EA6FB" fill-rule="evenodd" d="M0 6.66667H28V0H0V6.66667Z" clip-rule="evenodd"/>
   </g>
