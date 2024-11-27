@@ -1,4 +1,5 @@
-import { FlagCode, FlagName, flags } from "./metadata";
+import { FlagCode } from "./flags";
+import { flags } from "./metadata";
 import { FlagType } from "./types";
 
 export const getFlag = (v: FlagCode) =>
@@ -6,7 +7,7 @@ export const getFlag = (v: FlagCode) =>
 
 export const getFlagByCode = getFlag;
 
-export const getFlagByName = (v: FlagName) =>
+export const getFlagByName = (v: string) =>
     flags.find((country) => country.name === v);
 
 export const getFlagsByType = (v: FlagType) =>

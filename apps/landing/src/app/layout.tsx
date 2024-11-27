@@ -10,11 +10,6 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 })
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-})
 
 export const metadata: Metadata = {
   title: "React Beauty Flags",
@@ -29,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden min-h-dvh w-dvw`}
+        className={`${geistSans.variable} antialiased overflow-x-hidden min-h-dvh w-dvw `}
       >
         <Providers>
           {children}

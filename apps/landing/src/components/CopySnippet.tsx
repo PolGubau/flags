@@ -6,12 +6,17 @@ const CopySnippet = () => {
   const { copy } = useCopyToClipboard()
   const handleClick = () => {
     copy("pnpm i react-beauty-flags")
-    toast.success("Copied to clipboard")
+    toast.success("Copied to clipboard", {
+      description: "pnpm i react-beauty-flags",
+    })
   }
 
   return (
-    <Button onClick={handleClick} className="flex gap-2 items-center">
-      <span className="text-white">pnpm i react-beauty-flags</span>
+    <Button
+      onClick={handleClick}
+      className="flex rounded-xl p-5 gap-2 items-center"
+    >
+      pnpm i react-beauty-flags
     </Button>
   )
 }

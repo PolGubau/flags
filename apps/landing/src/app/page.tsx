@@ -1,4 +1,4 @@
-import { Flag, GenericFlagItem, flags } from "react-beauty-flags"
+import { Flag, FlagData, flags } from "react-beauty-flags"
 
 import { SearchParams } from "@/types/params"
 import CopySnippet from "@/components/CopySnippet"
@@ -12,7 +12,7 @@ export default async function Home({
   const q = (await searchParams)[SearchParams.search]
 
   // flags that name, code or type contains the search query
-  const filteredFlags: GenericFlagItem[] = flags.filter((flag) => {
+  const filteredFlags: FlagData[] = flags.filter((flag) => {
     if (!q) return true
     const stringifiedQ = Array.isArray(q) ? q.join("") : q
     const search = stringifiedQ.toLowerCase()
@@ -27,16 +27,36 @@ export default async function Home({
     <div className="flex justify-center font-[family-name:var(--font-geist-sans)] ">
       <div className="flex flex-col gap-8 items-center justify-center max-w-4xl w-full p-4 md:p-10 pt-20">
         <header className="flex flex-col gap-10 justify-center items-center py-20">
-          <div className="flex gap-10 pt-20">
-            <Flag code="Es" className="w-[40px] mb-0" />
-            <Flag code="Br" className="w-[30px] mb-4" />
-            <Flag code="De" className="w-[80px] mb-2" />
-            <Flag code="Ve" className="w-[60px] mb-6" />
+          <div className="flex gap-10 pt-20 h-full">
+            <Flag
+              code="Se"
+              className="-rotate-6 shadow-lg rounded-md"
+              width={28 * 1.3}
+              height={20 * 1.3}
+            />
+            <Flag
+              code="Es"
+              className="shadow-lg rounded-lg"
+              width={28 * 2.5}
+              height={20 * 2.5}
+            />
+            <Flag
+              code="De"
+              className="shadow-lg rounded-lg"
+              width={28 * 2.0}
+              height={20 * 2.0}
+            />
+            <Flag
+              code="Ve"
+              className="rotate-12 shadow-lg rounded-md"
+              width={28 * 1.5}
+              height={20 * 1.5}
+            />
           </div>
 
           <hgroup className="flex flex-col gap-2 items-center">
             <h1 className="text-5xl font-light">React Beauty Flags</h1>
-            <h2 className="text-lg">Fancy flags from around the world</h2>
+            <h2 className="text-lg">Fancy flags for you React projects</h2>
           </hgroup>
 
           <CopySnippet />

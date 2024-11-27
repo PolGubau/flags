@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-secondary-50 text-secondary-900;
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-secondary-50 dark:bg-secondary-900 text-secondary-900 dark:text-secondary-50;
 }

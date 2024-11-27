@@ -135,18 +135,18 @@ export enum FlagsCodesEnum {
     ${icons.map(({ componentName }) => `${componentName} = "${componentName}"`).join(",\n")}
 }
 
-export type AllFlagCode = keyof typeof FlagsCodesEnum;
+export type FlagCode = keyof typeof FlagsCodesEnum;
          
 
-export const FlagsCodes: Record<AllFlagCode, React.FC<React.SVGProps<SVGSVGElement>>> = {
+export const FlagsEnum: Record<FlagCode, React.FC<React.SVGProps<SVGSVGElement>>> = {
     ${icons.map(({ componentName }) => `${componentName}: ${componentName}`).join(",\n")}
 };
 
 interface FlagProps extends React.SVGProps<SVGSVGElement> {
-    code: AllFlagCode;
+    code: FlagCode;
 }
 export const Flag = ({ code, ...props }: FlagProps) => {
-    const Component = FlagsCodes[code];
+    const Component = FlagsEnum[code];
     return <Component {...props} />;
 };
 `,

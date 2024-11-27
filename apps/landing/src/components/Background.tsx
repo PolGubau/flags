@@ -4,7 +4,7 @@ import "./bg.css"
 
 const Background = () => {
   return (
-    <div className="w-dvw -z-20 pointer-events-none overflow-hidden">
+    <div className="w-dvw z-10 pointer-events-none overflow-hidden">
       <div className="rainbow"></div>
       <div className="rainbow"></div>
       <div className="rainbow"></div>

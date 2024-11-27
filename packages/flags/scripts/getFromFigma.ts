@@ -1,6 +1,6 @@
 import { promises as fs } from "fs";
 import * as path from "path";
-import dotenv from "dotenv"; // Import dotenv
+import dotenv from "dotenv";
 
 // Load the .env file
 dotenv.config();

@@ -499,10 +499,10 @@ Zm = "Zm",
 Zw = "Zw"
 }
 
-export type AllFlagCode = keyof typeof FlagsCodesEnum;
+export type FlagCode = keyof typeof FlagsCodesEnum;
          
 
-export const FlagsCodes: Record<AllFlagCode, React.FC<React.SVGProps<SVGSVGElement>>> = {
+export const FlagsEnum: Record<FlagCode, React.FC<React.SVGProps<SVGSVGElement>>> = {
     Ad: Ad,
 Ae: Ae,
 Af: Af,
@@ -752,9 +752,9 @@ Zw: Zw
 };
 
 interface FlagProps extends React.SVGProps<SVGSVGElement> {
-    code: AllFlagCode;
+    code: FlagCode;
 }
 export const Flag = ({ code, ...props }: FlagProps) => {
-    const Component = FlagsCodes[code];
+    const Component = FlagsEnum[code];
     return <Component {...props} />;
 };
