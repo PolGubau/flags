@@ -1,13 +1,7 @@
-:root {
-  --color-primary: #c4b68d00;
-  --color-secondary: #8c00ff21;
-  --color-tertiary: #a28ce534;
-  --color-quaternary: #d8006c18;
-}
 .rainbow {
   width: 0;
-  top: 0;
   position: absolute;
+  top: -10px;
   transform: rotate(20deg);
   transform-origin: top right;
   z-index: -1;
@@ -25,7 +19,6 @@
 }
 .rainbow:nth-child(2) {
   height: 20dvh;
-
   box-shadow:
     -130px 0 80px 40px var(--color-secondary),
     -50px 0 50px 25px var(--color-primary),

@@ -4,32 +4,10 @@ import "./bg.css"
 
 const Background = () => {
   return (
-    <div className="w-dvw z-10 pointer-events-none overflow-hidden">
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
-      <div className="rainbow"></div>
+    <div className="w-dvw pointer-events-none overflow-hidden">
+      {[...Array(25)].map((_, i) => (
+        <div key={i} className="rainbow" />
+      ))}
     </div>
   )
 }
