@@ -1,9 +1,9 @@
 import { FlagData, flags } from "react-beauty-flags"
 
+import { SearchParams } from "@/types/params"
 import CopySnippet from "@/components/CopySnippet"
 import ExampleFlags from "@/components/ExampleFlags"
 import FlagsList from "@/components/FlagsList/FlagsList"
-import { SearchParams } from "@/types/params"
 
 export default async function Home({
   searchParams,
@@ -25,7 +25,7 @@ export default async function Home({
   })
 
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <main className="flex flex-col gap-4 w-full">
       <header className="flex flex-col gap-10 justify-center items-center pb-20">
         <ExampleFlags />
 
@@ -38,9 +38,9 @@ export default async function Home({
           <CopySnippet />
         </nav>
       </header>
-      <main className="pb-20">
+      <div className="pb-20">
         <FlagsList list={filteredFlags} />
-      </main>
-    </div>
+      </div>
+    </main>
   )
 }

@@ -15,7 +15,7 @@ const Footer = () => {
 
       <nav className="flex gap-4 items-center">
         <Link href={"docs"}>
-          <Button className="rounded-xl ">
+          <Button className="rounded-xl font-medium">
             See the docs
             <TbArrowUpRight size={17} />
           </Button>

@@ -38,10 +38,32 @@ To use React Beauty Flags in your application, import the **`Flag`** component
 import Flag from "react-beauty-flags"
 
 const App = () => {
-  return <Flag code="US" />
+  return <Flag code="Es" />
 }
 
 export default App
+```
+
+The Flag is rendered by default with a width of **28px** and a height of **20px** (aspect ratio 1.4).
+
+To customize the size, you can pass the **width** and **height** props, even if you can pass all desired sizes, to keep the aspect ratio you can keep this relation (width = height \* 1.4).
+
+To use a scale factor, you can multiply the default size by the desired factor:
+
+```jsx
+<Flag code="Es" width={28 * 1.3} height={20 * 1.3} />
+```
+
+Also you can pass only the width or height:
+
+```jsx
+<Flag code="Es" width={50} /> // This is also valid but the aspect ratio will be different
+```
+
+The easier way to change the size is to pass the width and height props directly:
+
+```jsx
+<Flag code="Es" width={200} height={140} />
 ```
 
 ## Props
@@ -55,7 +77,7 @@ The **Flag** component accepts the following props:
 - **Example**:
 
 ```jsx
-<Flag code="FR" /> // Displays the French flag
+<Flag code="Fr" /> // Displays the French flag
 ```
 
 ### Additional SVG Props
@@ -65,7 +87,7 @@ The **Flag** component also accepts all standard SVG props, allowing for furth
 - **Example**:
 
 ```jsx
-<Flag code="JP" width={50} height={50} title="Japan Flag" />
+<Flag code="Jp" width={50} height={50} title="Japan Flag" />
 ```
 
 ## **Utility Functions**
@@ -81,8 +103,8 @@ React Beauty Flags comes with several utility functions to help you work with fl
 ```js
 import { getFlagByCode } from "react-beauty-flags"
 
-const japanFlag = getFlagByCode("JP")
-console.log(japanFlag) // { code: "JP", name: "Japan", type: "country" }
+const japanFlag = getFlagByCode("Jp")
+console.log(japanFlag) // { code: "Jp", name: "Japan", type: "country" }
 ```
 
 ### getFlagByName
@@ -95,7 +117,7 @@ console.log(japanFlag) // { code: "JP", name: "Japan", type: "country" }
 import { getFlagByName } from "react-beauty-flags"
 
 const franceFlag = getFlagByName("France")
-console.log(franceFlag) // { code: "FR", name: "France", type: "country" }
+console.log(franceFlag) // { code: "Fr", name: "France", type: "country" }
 ```
 
 ### **getFlagsByType**
@@ -111,19 +133,19 @@ const countryFlags = getFlagsByType("country")
 console.log(countryFlags) // List of all country flags
 ```
 
-## **Types**
+## Types
 
-### **FlagType**
+### FlagType
 
 The available flag types:
 
-- **"country"**
-- **"region"**
-- **"world"**
-- **"historical"**
-- **"city"**
-- **"symbol"**
-- **"other"**
+- "country"
+- "region"
+- "world"
+- "historical"
+- "city"
+- "symbol"
+- "other"
 
 ### FlagCode
 
