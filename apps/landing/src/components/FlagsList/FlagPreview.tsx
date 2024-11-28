@@ -38,9 +38,10 @@ const FlagPreview = ({ code }: { code: FlagCode }) => {
         {Object.keys(options).map((o) => {
           const items: string[] = options[o as keyof typeof options]
           return (
-            <ul className="grid grid-cols-6 gap-2">
+            <ul className="grid grid-cols-6 gap-2" key={o}>
               {items.map((key) => (
                 <button
+                  key={key}
                   onClick={() => setStyle({ [o]: key })}
                   className={cn(
                     "border-2 border-secondary-200 dark:border-secondary-800   aspect-square w-[30px] relative overflow-hidden rounded-md",

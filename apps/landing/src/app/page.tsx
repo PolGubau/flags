@@ -6,14 +6,7 @@ import Filters from "@/components/Filters/Filters"
 import FlagsList from "@/components/FlagsList/FlagsList"
 import NoResults from "@/components/FlagsList/NoResults"
 
-type SearchParams = { [key: string]: string | string[] | undefined }
-
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: SearchParams
-}) {
-  // flags that name, code or type contains the search query
+export default async function Home({ searchParams }: { searchParams: any }) {
   const q = searchParams?.q || null
 
   const filteredFlags: FlagData[] = flags.filter((flag) => {
