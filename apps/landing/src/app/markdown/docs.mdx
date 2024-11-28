@@ -1,20 +1,39 @@
-React Beauty Flags
-
 # Documentation
 
-React Beauty Flags is a simple React component that renders a flag of a country. It is a simple and easy way to display a flag in your React application.
+**React Beauty Flags** is a simple React library that renders a handmade flag of a country. It provides an easy way to display flags in your React applications with minimal setup.
+
+## Goal
+
+As a frontend developer, I faced many times the need to display flags in my applications. I found that most libraries available were either **too complex or their designs were not visually appealing**. I wanted to create a set based on beautiful designs that would allow me and any developer to display flags with ease.
+
+As a **Duolingo** user, I was inspired by their flag designs and decided to create a similar feeling for React applications.
+
+You will find +250 flags, including countries, regions, cities, and symbols. The flags are designed with a unique style that makes them visually appealing and easy to recognize.
+
+If you develop a bank or financial application, this might not be the best choice for you. However, if you are building a beautiful with modern UX design, this library is perfect for you. 😀
 
 ## Installation
 
-To install React Beauty Flags, you can use npm, pnmp, or yarn.
+To install React Beauty Flags, use your package manager of choice:
 
-```bash
+```jsx
 pnpm install react-beauty-flags
 ```
 
-## Usage
+You can also use `npm` or `yarn`:
 
-To use React Beauty Flags in your application, you need to import the component and pass the `countrycode` as a prop. Here is an example:
+```bash
+bash
+Copiar código
+npm install react-beauty-flags
+# or
+yarn add react-beauty-flags
+
+```
+
+## **Usage**
+
+To use React Beauty Flags in your application, import the **`Flag`** component and pass the **`code`** prop to specify the country:
 
 ```jsx
 import Flag from "react-beauty-flags"
@@ -22,6 +41,160 @@ import Flag from "react-beauty-flags"
 const App = () => {
   return <Flag code="US" />
 }
+
+export default App
 ```
 
-## Props
+## **Props**
+
+The **`Flag`** component accepts the following props:
+
+### **`code` (required)**
+
+- **Type**: **`FlagCode`**
+- **Description**: The unique code for the flag you want to display. This should be one of the keys in **`FlagsCodesEnum`**.
+- **Example**:
+
+```jsx
+jsx
+Copiar código
+<Flag code="FR" /> // Displays the French flag
+
+```
+
+### **Additional SVG Props**
+
+The **`Flag`** component also accepts all standard SVG props, allowing for further customization.
+
+- **Example**:
+
+```jsx
+jsx
+Copiar código
+<Flag code="JP" width={50} height={50} title="Japan Flag" />
+
+```
+
+## **Utility Functions**
+
+React Beauty Flags comes with several utility functions to help you work with flags.
+
+### **`getFlagByCode`**
+
+- **Type**: **`(code: FlagCode) => FlagData | undefined`**
+- **Description**: Retrieves flag data by its code.
+- **Example**:
+
+```
+js
+Copiar código
+import { getFlagByCode } from "react-beauty-flags";
+
+const japanFlag = getFlagByCode("JP");
+console.log(japanFlag); // { code: "JP", name: "Japan", type: "country" }
+
+```
+
+### **`getFlagByName`**
+
+- **Type**: **`(name: string) => FlagData | undefined`**
+- **Description**: Retrieves flag data by its name.
+- **Example**:
+
+```
+js
+Copiar código
+import { getFlagByName } from "react-beauty-flags";
+
+const franceFlag = getFlagByName("France");
+console.log(franceFlag); // { code: "FR", name: "France", type: "country" }
+
+```
+
+### **`getFlagsByType`**
+
+- **Type**: **`(type: FlagType) => FlagData[]`**
+- **Description**: Retrieves all flags of a specific type.
+- **Example**:
+
+```
+js
+Copiar código
+import { getFlagsByType } from "react-beauty-flags";
+
+const countryFlags = getFlagsByType("country");
+console.log(countryFlags); // List of all country flags
+
+```
+
+## **Types**
+
+### **`FlagType`**
+
+The available flag types:
+
+- **`"country"`**
+- **`"region"`**
+- **`"world"`**
+- **`"historical"`**
+- **`"city"`**
+- **`"symbol"`**
+- **`"other"`**
+
+### **`FlagCode`**
+
+A union type of all available flag codes.
+
+### **`FlagData`**
+
+Represents the data structure of a flag:
+
+```
+ts
+Copiar código
+type FlagData = {
+  code: FlagCode;
+  name: string;
+  type: FlagType;
+};
+
+```
+
+## **Enum**
+
+### **`FlagsCodesEnum`**
+
+An enum of all valid flag codes:
+
+```
+ts
+Copiar código
+enum FlagsCodesEnum {
+  US = "US",
+  FR = "FR",
+  JP = "JP",
+  // ...
+}
+
+```
+
+## **Advanced Usage**
+
+### **Customizing the `Flag` Component**
+
+You can extend the functionality of the **`Flag`** component by using additional SVG attributes or wrapping it in your own custom components.
+
+### **Example:**
+
+```jsx
+import Flag from "react-beauty-flags"
+
+const CustomFlag = ({ code }) => (
+  <div style={{ border: "1px solid black", display: "inline-block" }}>
+    <Flag code={code} width={40} height={40} />
+  </div>
+)
+
+const App = () => <CustomFlag code="BR" />
+export default App
+```
