@@ -2,9 +2,7 @@
   width: 0;
   position: absolute;
   top: -10px;
-  transform: rotate(20deg);
-  transform-origin: top right;
-  z-index: -1;
+  /* transform: rotate(20deg); */
 }
 .rainbow:nth-child(1) {
   height: 10dvh;

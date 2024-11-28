@@ -30,8 +30,12 @@ export default async function Home({
         <ExampleFlags />
 
         <hgroup className="flex flex-col gap-2 items-center">
-          <h1 className="text-5xl font-light">React Beauty Flags</h1>
-          <h2 className="text-lg">Fancy flags for you React projects</h2>
+          <h1 className="text-3xl md:text-5xl font-light text-center">
+            React Beauty Flags
+          </h1>
+          <h2 className="text-lg text-center text-pretty">
+            Fancy flags for you React projects
+          </h2>
         </hgroup>
 
         <nav className="flex gap-2 items-center">

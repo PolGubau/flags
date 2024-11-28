@@ -3,7 +3,7 @@ import { Flag } from "react-beauty-flags"
 
 const ExampleFlags = () => {
   return (
-    <div className="flex gap-10 pt-20 h-full">
+    <div className="flex gap-4 md:gap-10 pt-20 h-full">
       <Flag
         code="Se"
         className="timeline timeline-first -rotate-6 shadow-lg rounded-md"
