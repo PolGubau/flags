@@ -82,7 +82,9 @@ const Panel = ({ flag }: { flag: FlagData }) => {
                   </pre>
                   <pre
                     className=" grid grid-cols-[1fr,auto] gap-1 items-center text-sm bg-secondary-200 dark:bg-secondary-800 hover:opacity-80 transition-opacity py-3 px-4  rounded-xl cursor-pointer"
-                    onClick={() => handleClick(code)}
+                    onClick={() =>
+                      handleClick(code, `<Flag code="${code}" ${className}/>`)
+                    }
                   >
                     {`<Flag code="${code}" ${className}/>`}
                     <TbClipboard size={17} />
@@ -108,7 +110,7 @@ const Panel = ({ flag }: { flag: FlagData }) => {
                   </pre>
                   <pre
                     className=" grid grid-cols-[1fr,auto] gap-1 items-center text-sm bg-secondary-200 dark:bg-secondary-800 hover:opacity-80 transition-opacity py-3 px-4  rounded-xl cursor-pointer"
-                    onClick={() => handleClick(code, `<${code}/>`)}
+                    onClick={() => handleClick(code, `<${code} ${className}/>`)}
                   >
                     {`<${code} ${className}/>`}
                     <TbClipboard size={17} />
