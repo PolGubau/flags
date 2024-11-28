@@ -39,7 +39,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Incrementa la versión automáticamente
+        # Incrementa la versión automáticamente
       - name: Bump version
         id: bump_version
         run: |
@@ -49,6 +49,18 @@ jobs:
           jq ".version = \"$NEW_VERSION\"" $PACKAGE_PATH > tmp.json && mv tmp.json $PACKAGE_PATH
           echo "New version: $NEW_VERSION"
 
+      # Commit el cambio de versión antes de publicar
+      - name: Commit version bump
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add packages/flags/package.json
+          git commit -m "ci: bump version to $NEW_VERSION"
+
+      # Push the commit para que el árbol esté limpio antes de publicar
+      - name: Push version bump commit
+        run: git push origin main
+
       # Compila el paquete
       - name: Build the package
         run: pnpm run --filter packages/flags build
@@ -57,7 +69,7 @@ jobs:
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm publish packages/flags --access public
+        run: pnpm publish packages/flags --access public --no-git-checks
 
       # Confirma el cambio de versión en git
       - name: Commit version bump
