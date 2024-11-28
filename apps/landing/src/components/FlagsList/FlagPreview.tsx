@@ -21,7 +21,7 @@ const FlagPreview = ({ code }: { code: FlagCode }) => {
   })
 
   return (
-    <div className="w-full grid grid-cols-[auto,1fr] gap-8">
+    <div className="w-full grid grid-cols-[1fr,2fr] gap-8">
       <Flag
         code={code}
         className={cn(
@@ -43,7 +43,7 @@ const FlagPreview = ({ code }: { code: FlagCode }) => {
                 <button
                   onClick={() => setStyle({ [o]: key })}
                   className={cn(
-                    "border-2 border-secondary-200 dark:border-secondary-800 w-full aspect-square max-w-[35px] relative overflow-hidden rounded-md",
+                    "border-2 border-secondary-200 dark:border-secondary-800   aspect-square w-[30px] relative overflow-hidden rounded-md",
                     {
                       "border-primary-800 dark:border-primary-200":
                         style[o as keyof typeof style] === key,
@@ -52,7 +52,7 @@ const FlagPreview = ({ code }: { code: FlagCode }) => {
                 >
                   <li
                     className={cn(
-                      "bg-secondary-400 border border-secondary-700 h-[80px] w-[80px] -mt-[60px] -ml-[50px] ",
+                      "bg-secondary-400 border-secondary-700 h-[70px] w-[70px] -mt-[60px] -ml-[50px] ",
                       style.rounded,
                       style.border,
                       style.shadow,
