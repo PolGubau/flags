@@ -14,7 +14,7 @@ const CopySnippet = () => {
   }
 
   return (
-    <nav className="flex gap-1 items-center">
+    <nav className="flex gap-2 items-center">
       <Button
         onClick={handleClick}
         className="flex rounded-xl p-5 gap-2 items-center"

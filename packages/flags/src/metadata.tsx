@@ -1324,7 +1324,7 @@ export const flags: FlagData[] = [
         // flag: Eu as FC<ComponentProps<"svg"> & SVGRProps>,
     },
     {
-        name: "Catolonia",
+        name: "Catolania",
         type: "region",
         code: "EsCataluna",
         // flag: EsCataluna as FC<ComponentProps<"svg"> & SVGRProps>,

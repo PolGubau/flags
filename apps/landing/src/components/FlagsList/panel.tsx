@@ -1,17 +1,20 @@
 "use client"
 
 import React from "react"
-import { Alert, toast, useCopyToClipboard } from "pol-ui"
+import { Tabs, toast, useCopyToClipboard } from "pol-ui"
 import { Flag, FlagCode, FlagData } from "react-beauty-flags"
+import { TbClipboard } from "react-icons/tb"
+
+import FlagPreview from "./FlagPreview"
 
 const Panel = ({ flag }: { flag: FlagData }) => {
   const { copy } = useCopyToClipboard()
 
-  const handleClick = (code: FlagCode) => {
+  const handleClick = (code: FlagCode, customText?: string) => {
     const componentName = `<Flag code="${code}" />`
 
     toast.success(`Copied to clipboard`, {
-      description: `${componentName}`,
+      description: customText ?? `${componentName}`,
       icon: (
         <Flag
           code={code}
@@ -21,6 +24,7 @@ const Panel = ({ flag }: { flag: FlagData }) => {
     })
     copy(code)
   }
+
   const { code, name, type } = flag
   return (
     <div className="flex flex-col gap-4 mt-6">
@@ -28,22 +32,70 @@ const Panel = ({ flag }: { flag: FlagData }) => {
         <h3 className="text-2xl">{name}</h3>
         <h4 className="opacity-80 capitalize">{type}</h4>
       </hgroup>
-      <Flag
-        code={code}
-        className="border-secondary-200 dark:border-secondary-800 rounded-2xl border-4 w-fit"
-        height={100}
-        width={140}
-      />
 
-      <p>To use this flag, copy the following code:</p>
-      <Alert>{`<Flag code="${code}" />`}</Alert>
+      <FlagPreview code={code} />
 
-      <button
-        className="bg-primary text-white px-4 py-2 rounded-lg"
-        // onClick={() => handleClick(code)}
-      >
-        Copy
-      </button>
+      <article className="flex flex-col gap-1">
+        <p className="text-lg font-semibold pt-6">Usage</p>
+        <small>Choose your desired way:</small>
+
+        <Tabs
+          tabs={[
+            {
+              name: "Use Flag Component",
+              content: (
+                <div className="flex flex-col gap-2">
+                  <pre
+                    className=" grid grid-cols-[1fr,auto] gap-1 items-center text-sm bg-secondary-200 dark:bg-secondary-800 hover:opacity-80 transition-opacity py-3 px-4  rounded-xl cursor-pointer"
+                    onClick={() =>
+                      handleClick(
+                        code,
+                        `import { Flag } from "react-beauty-flags"`
+                      )
+                    }
+                  >
+                    {`import { Flag } from "react-beauty-flags"`}
+                    <TbClipboard size={17} />
+                  </pre>
+                  <pre
+                    className=" grid grid-cols-[1fr,auto] gap-1 items-center text-sm bg-secondary-200 dark:bg-secondary-800 hover:opacity-80 transition-opacity py-3 px-4  rounded-xl cursor-pointer"
+                    onClick={() => handleClick(code)}
+                  >
+                    {`<Flag code="${code}" />`}
+                    <TbClipboard size={17} />
+                  </pre>
+                </div>
+              ),
+            },
+            {
+              name: "Direct Import",
+              content: (
+                <div className="flex flex-col gap-2">
+                  <pre
+                    className=" grid grid-cols-[1fr,auto] gap-1 items-center text-sm bg-secondary-200 dark:bg-secondary-800 hover:opacity-80 transition-opacity py-3 px-4  rounded-xl cursor-pointer"
+                    onClick={() =>
+                      handleClick(
+                        code,
+                        `import { ${code} } from "react-beauty-flags"`
+                      )
+                    }
+                  >
+                    {`import { ${code} } from "react-beauty-flags"`}
+                    <TbClipboard size={17} />
+                  </pre>
+                  <pre
+                    className=" grid grid-cols-[1fr,auto] gap-1 items-center text-sm bg-secondary-200 dark:bg-secondary-800 hover:opacity-80 transition-opacity py-3 px-4  rounded-xl cursor-pointer"
+                    onClick={() => handleClick(code, `<${code}/>`)}
+                  >
+                    {`<${code}/>`}
+                    <TbClipboard size={17} />
+                  </pre>
+                </div>
+              ),
+            },
+          ]}
+        />
+      </article>
     </div>
   )
 }

@@ -1,19 +1,19 @@
 import { FlagData, flags } from "react-beauty-flags"
 
-import { SearchParams } from "@/types/params"
 import CopySnippet from "@/components/CopySnippet"
 import ExampleFlags from "@/components/ExampleFlags"
+import Filters from "@/components/Filters/Filters"
 import FlagsList from "@/components/FlagsList/FlagsList"
+import NoResults from "@/components/FlagsList/NoResults"
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-}) {
-  const q = (await searchParams)[SearchParams.search]
+interface HomeProps {
+  searchParams: Record<string, string>
+}
 
+export default async function Home({ searchParams }: HomeProps) {
   // flags that name, code or type contains the search query
   const filteredFlags: FlagData[] = flags.filter((flag) => {
+    const q = searchParams?.q || null
     if (!q) return true
     const stringifiedQ = Array.isArray(q) ? q.join("") : q
     const search = stringifiedQ.toLowerCase()
@@ -25,7 +25,7 @@ export default async function Home({
   })
 
   return (
-    <main className="flex flex-col gap-4 w-full">
+    <main className="w-full min-h-dvh">
       <header className="flex flex-col gap-10 justify-center items-center pb-20">
         <ExampleFlags />
 
@@ -38,12 +38,15 @@ export default async function Home({
           </h2>
         </hgroup>
 
-        <nav className="flex gap-2 items-center">
-          <CopySnippet />
-        </nav>
+        <CopySnippet />
       </header>
-      <div className="pb-20">
-        <FlagsList list={filteredFlags} />
+      <div className="pb-20 space-y-20">
+        <Filters />
+        {filteredFlags.length > 0 ? (
+          <FlagsList list={filteredFlags} />
+        ) : (
+          <NoResults q={searchParams.q} />
+        )}
       </div>
     </main>
   )
