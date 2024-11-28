@@ -11,7 +11,7 @@ const Page = () => {
       <Link
         href="/"
         passHref
-        className="underline underline-offset-1 flex gap-1 items-center group decoration-wavy decoration-primary"
+        className="underline underline-offset-1 flex gap-1 items-center group decoration-wavy decoration-primary dark:text-primary-100"
       >
         <TbArrowLeft className="text-lg" />
         Back to Home
