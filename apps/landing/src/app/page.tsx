@@ -6,14 +6,17 @@ import Filters from "@/components/Filters/Filters"
 import FlagsList from "@/components/FlagsList/FlagsList"
 import NoResults from "@/components/FlagsList/NoResults"
 
-interface HomeProps {
-  searchParams: Record<string, string>
-}
+type SearchParams = { [key: string]: string | string[] | undefined }
 
-export default async function Home({ searchParams }: HomeProps) {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: SearchParams
+}) {
   // flags that name, code or type contains the search query
+  const q = searchParams?.q || null
+
   const filteredFlags: FlagData[] = flags.filter((flag) => {
-    const q = searchParams?.q || null
     if (!q) return true
     const stringifiedQ = Array.isArray(q) ? q.join("") : q
     const search = stringifiedQ.toLowerCase()
@@ -45,7 +48,7 @@ export default async function Home({ searchParams }: HomeProps) {
         {filteredFlags.length > 0 ? (
           <FlagsList list={filteredFlags} />
         ) : (
-          <NoResults q={searchParams.q} />
+          <NoResults q={searchParams.q?.toString() ?? ""} />
         )}
       </div>
     </main>

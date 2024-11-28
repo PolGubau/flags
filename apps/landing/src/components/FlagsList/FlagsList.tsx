@@ -1,9 +1,7 @@
 "use client"
 
-import React from "react"
-import { presets } from "@/data/presets"
-import { parseAsString, useQueryState, useQueryStates } from "nuqs"
-import { Drawer, Input, cn, groupBy } from "pol-ui"
+import { parseAsString, useQueryStates } from "nuqs"
+import { Drawer, cn, groupBy } from "pol-ui"
 import { Flag, type FlagData } from "react-beauty-flags"
 
 import Panel from "./panel"

@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { parseAsString, useQueryStates } from "nuqs"
 import { Tabs, toast, useCopyToClipboard } from "pol-ui"
 import { Flag, FlagCode, FlagData } from "react-beauty-flags"
 import { TbClipboard } from "react-icons/tb"
@@ -24,8 +25,30 @@ const Panel = ({ flag }: { flag: FlagData }) => {
     })
     copy(code)
   }
-
+  const [style] = useQueryStates({
+    rounded: parseAsString.withDefault("rounded-xl"),
+    shadow: parseAsString.withDefault("shadow-md"),
+    border: parseAsString.withDefault("border-4"),
+  })
   const { code, name, type } = flag
+
+  const classNameBuilder = () => {
+    let className = ""
+    if (style.border && style.border != "border-none")
+      className += `${style.border} `
+    //
+    if (style.shadow && style.shadow != "shadow-none")
+      className += `${style.shadow} `
+    //
+    if (style.rounded && style.rounded != "rounded-none")
+      className += `${style.rounded} `
+
+    return className
+  }
+
+  const className =
+    classNameBuilder().length > 0 ? `className="${classNameBuilder()}"` : ""
+
   return (
     <div className="flex flex-col gap-4 mt-6">
       <hgroup className="flex flex-col gap-1">
@@ -61,7 +84,7 @@ const Panel = ({ flag }: { flag: FlagData }) => {
                     className=" grid grid-cols-[1fr,auto] gap-1 items-center text-sm bg-secondary-200 dark:bg-secondary-800 hover:opacity-80 transition-opacity py-3 px-4  rounded-xl cursor-pointer"
                     onClick={() => handleClick(code)}
                   >
-                    {`<Flag code="${code}" />`}
+                    {`<Flag code="${code}" ${className}/>`}
                     <TbClipboard size={17} />
                   </pre>
                 </div>
@@ -87,7 +110,7 @@ const Panel = ({ flag }: { flag: FlagData }) => {
                     className=" grid grid-cols-[1fr,auto] gap-1 items-center text-sm bg-secondary-200 dark:bg-secondary-800 hover:opacity-80 transition-opacity py-3 px-4  rounded-xl cursor-pointer"
                     onClick={() => handleClick(code, `<${code}/>`)}
                   >
-                    {`<${code}/>`}
+                    {`<${code} ${className}/>`}
                     <TbClipboard size={17} />
                   </pre>
                 </div>
