@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className="flex flex-col gap-12 items-center pb-32">
       <ExampleFlags />
 
-      <nav className="flex gap-4 items-center">
+      <nav className="flex gap-4 items-center max-md:flex-col ">
         <Link href={"docs"}>
           <Button className="rounded-xl font-medium">
             See the docs
@@ -21,25 +21,27 @@ const Footer = () => {
           </Button>
         </Link>
         {/*  */}
-        <Link
-          href={"https://github.com/PolGubau"}
-          className="flex items-center gap-1"
-        >
-          <IconButton>
-            <FaGithub size={18} />
-          </IconButton>
-          Github
-        </Link>
+        <div className="flex gap-2 items-center">
+          <Link
+            href={"https://github.com/PolGubau"}
+            className="flex items-center gap-1"
+          >
+            <IconButton>
+              <FaGithub size={18} />
+            </IconButton>
+            Github
+          </Link>
 
-        <Link
-          href={"https://polgubau.com/"}
-          className="flex items-center gap-1"
-        >
-          <IconButton>
-            <TbWorld size={18} />
-          </IconButton>
-          Website
-        </Link>
+          <Link
+            href={"https://polgubau.com/"}
+            className="flex items-center gap-1"
+          >
+            <IconButton>
+              <TbWorld size={18} />
+            </IconButton>
+            Website
+          </Link>
+        </div>
       </nav>
 
       <p className="text-2xl font-bold text-center">Proudly open source</p>

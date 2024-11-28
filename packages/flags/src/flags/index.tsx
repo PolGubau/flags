@@ -88,6 +88,7 @@ import { default as EsMataro} from "./EsMataro";
 import { default as EsMurcia} from "./EsMurcia";
 import { default as EsNavarra} from "./EsNavarra";
 import { default as EsOurense} from "./EsOurense";
+import { default as EsPremiaMar} from "./EsPremiaMar";
 import { default as EsRepublica} from "./EsRepublica";
 import { default as EsRioja} from "./EsRioja";
 import { default as EsTarragona} from "./EsTarragona";
@@ -184,6 +185,7 @@ import { default as Nz} from "./Nz";
 import { default as Om} from "./Om";
 import { default as Pa} from "./Pa";
 import { default as Pe} from "./Pe";
+import { default as Peace} from "./Peace";
 import { default as Pf} from "./Pf";
 import { default as Pg} from "./Pg";
 import { default as Ph} from "./Ph";
@@ -248,7 +250,7 @@ import { default as Zm} from "./Zm";
 import { default as Zw} from "./Zw";    
 
         
-export { Ad, Ae, Af, Ag, Ai, Al, Am, An, Ao, Aq, Ar, At, Au, Aw, Ax, Az, Ba, Bb, Bd, Be, Bf, Bg, Bh, Bi, Bj, Bm, Bn, Bo, Br, Bs, Bt, Bw, By, Bz, Ca, Caf, Cas, Cat, Cd, Ceu, Cf, Cg, Ch, Ci, Cl, Cm, Cn, Cna, Co, Coc, Cr, Csa, Cu, Cv, Cy, Cz, De, Dj, Dk, Dm, Do, Dz, Ec, Ee, Eg, Er, Es, EsAlmeria, EsAndalucia, EsAragon, EsAsturias, EsBalear, EsBarcelona, EsBasco, EsBorgona, EsCanarias, EsCantabria, EsCataluna, EsExtremadura, EsGalicia, EsGirona, EsLeon, EsMadrid, EsMancha, EsMataro, EsMurcia, EsNavarra, EsOurense, EsRepublica, EsRioja, EsTarragona, EsValencia, Et, Eu, Fi, Fj, Fk, Fm, Fr, Ga, Gb, Gd, Ge, Gg, Gh, Gi, Gl, Gm, Gn, Gq, Gr, Gt, Gw, Gy, Hk, Hn, Hr, Ht, Hu, Id, Ie, Il, Im, In, Iq, Ir, Is, It, Je, Jm, Jo, Jp, Ke, Kg, Kh, Km, Kn, Kp, Kr, Kw, Ky, Kz, La, Lb, Lc, Lgtb, Li, Lk, Lr, Ls, Lt, Lu, Lv, Ly, Ma, Mc, Md, Me, Mg, Mk, Ml, Mm, Mn, Mo, Mr, Ms, Mt, Mu, Mv, Mw, Mx, My, Mz, Na, Ne, Ng, Ni, Nl, No, Np, Nz, Om, Pa, Pe, Pf, Pg, Ph, Pk, Pl, Pr, Pt, Pw, Py, Qa, Ro, Rs, Ru, Rw, Sa, Sb, Sc, Sd, Se, Sg, Sh, Si, Sk, Sl, Sm, Sn, So, Sr, St, Sv, Sy, Sz, Tc, Td, Tg, Th, Tj, Tl, Tm, Tn, To, Tr, Tt, Tw, Tz, Ua, Ug, Us, Uy, Uz, Va, Vc, Ve, Vg, Vn, Vu, Ws, Ww, Ye, Za, Zm, Zw };
+export { Ad, Ae, Af, Ag, Ai, Al, Am, An, Ao, Aq, Ar, At, Au, Aw, Ax, Az, Ba, Bb, Bd, Be, Bf, Bg, Bh, Bi, Bj, Bm, Bn, Bo, Br, Bs, Bt, Bw, By, Bz, Ca, Caf, Cas, Cat, Cd, Ceu, Cf, Cg, Ch, Ci, Cl, Cm, Cn, Cna, Co, Coc, Cr, Csa, Cu, Cv, Cy, Cz, De, Dj, Dk, Dm, Do, Dz, Ec, Ee, Eg, Er, Es, EsAlmeria, EsAndalucia, EsAragon, EsAsturias, EsBalear, EsBarcelona, EsBasco, EsBorgona, EsCanarias, EsCantabria, EsCataluna, EsExtremadura, EsGalicia, EsGirona, EsLeon, EsMadrid, EsMancha, EsMataro, EsMurcia, EsNavarra, EsOurense, EsPremiaMar, EsRepublica, EsRioja, EsTarragona, EsValencia, Et, Eu, Fi, Fj, Fk, Fm, Fr, Ga, Gb, Gd, Ge, Gg, Gh, Gi, Gl, Gm, Gn, Gq, Gr, Gt, Gw, Gy, Hk, Hn, Hr, Ht, Hu, Id, Ie, Il, Im, In, Iq, Ir, Is, It, Je, Jm, Jo, Jp, Ke, Kg, Kh, Km, Kn, Kp, Kr, Kw, Ky, Kz, La, Lb, Lc, Lgtb, Li, Lk, Lr, Ls, Lt, Lu, Lv, Ly, Ma, Mc, Md, Me, Mg, Mk, Ml, Mm, Mn, Mo, Mr, Ms, Mt, Mu, Mv, Mw, Mx, My, Mz, Na, Ne, Ng, Ni, Nl, No, Np, Nz, Om, Pa, Pe, Peace, Pf, Pg, Ph, Pk, Pl, Pr, Pt, Pw, Py, Qa, Ro, Rs, Ru, Rw, Sa, Sb, Sc, Sd, Se, Sg, Sh, Si, Sk, Sl, Sm, Sn, So, Sr, St, Sv, Sy, Sz, Tc, Td, Tg, Th, Tj, Tl, Tm, Tn, To, Tr, Tt, Tw, Tz, Ua, Ug, Us, Uy, Uz, Va, Vc, Ve, Vg, Vn, Vu, Ws, Ww, Ye, Za, Zm, Zw };
     
 export enum FlagsCodesEnum {
     Ad = "Ad",
@@ -339,6 +341,7 @@ EsMataro = "EsMataro",
 EsMurcia = "EsMurcia",
 EsNavarra = "EsNavarra",
 EsOurense = "EsOurense",
+EsPremiaMar = "EsPremiaMar",
 EsRepublica = "EsRepublica",
 EsRioja = "EsRioja",
 EsTarragona = "EsTarragona",
@@ -435,6 +438,7 @@ Nz = "Nz",
 Om = "Om",
 Pa = "Pa",
 Pe = "Pe",
+Peace = "Peace",
 Pf = "Pf",
 Pg = "Pg",
 Ph = "Ph",
@@ -591,6 +595,7 @@ EsMataro: EsMataro,
 EsMurcia: EsMurcia,
 EsNavarra: EsNavarra,
 EsOurense: EsOurense,
+EsPremiaMar: EsPremiaMar,
 EsRepublica: EsRepublica,
 EsRioja: EsRioja,
 EsTarragona: EsTarragona,
@@ -687,6 +692,7 @@ Nz: Nz,
 Om: Om,
 Pa: Pa,
 Pe: Pe,
+Peace: Peace,
 Pf: Pf,
 Pg: Pg,
 Ph: Ph,

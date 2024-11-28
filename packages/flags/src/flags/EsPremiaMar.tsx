@@ -1,0 +1,18 @@
+import * as React from "react";
+import { SVGProps } from "react";
+interface SVGRProps {
+  title?: string;
+  titleId?: string;
+  desc?: string;
+  descId?: string;
+}
+const EsPremiaMar = ({
+  title,
+  titleId,
+  desc,
+  descId,
+  ...props
+}: SVGProps<SVGSVGElement> & SVGRProps) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" aria-hidden="true" width={props.width ?? 28} height={props.height ?? 20} aria-labelledby={titleId} aria-describedby={descId} {...props}>{desc ? <desc id={descId}>{desc}</desc> : null}{title ? <title id={titleId}>{title}</title> : null}<g clipPath="url(#clip0_25_275)"><rect width={28} height={20} fill="white" /><rect width={28} height={20} fill="white" /><mask id="mask0_25_275" width={16} height={15} x={6} y={4} maskUnits="userSpaceOnUse" style={{
+      maskType: "alpha"
+    }}><rect width={9} height={9} x={14} y={4.70711} fill="#D9D9D9" stroke="#4C4C4C" transform="rotate(45 14 4.70711)" /></mask><g mask="url(#mask0_25_275)"><path fill="#0EA6FB" d="M9 13.4424C9 12.7856 9.66342 12.3364 10.2733 12.5804L10.9672 12.8579C11.3092 12.9947 11.6908 12.9947 12.0328 12.8579L12.75 12.571C13.5524 12.2501 14.4476 12.2501 15.25 12.571L15.9672 12.8579C16.3092 12.9947 16.6908 12.9947 17.0328 12.8579L17.7267 12.5804C18.3366 12.3364 19 12.7856 19 13.4424C19 13.8221 18.7689 14.1635 18.4164 14.3045L17.4285 14.6997C16.8324 14.9381 16.1676 14.9381 15.5715 14.6997L15.25 14.571C14.4476 14.2501 13.5524 14.2501 12.75 14.571L12.4285 14.6997C11.8324 14.9381 11.1676 14.9381 10.5715 14.6997L9.58365 14.3045C9.23115 14.1635 9 13.8221 9 13.4424Z" /><path fill="#0EA6FB" d="M9 16.4424C9 15.7856 9.66342 15.3364 10.2733 15.5804L10.9672 15.8579C11.3092 15.9947 11.6908 15.9947 12.0328 15.8579L12.75 15.571C13.5524 15.2501 14.4476 15.2501 15.25 15.571L15.9672 15.8579C16.3092 15.9947 16.6908 15.9947 17.0328 15.8579L17.7267 15.5804C18.3366 15.3364 19 15.7856 19 16.4424C19 16.8221 18.7689 17.1635 18.4164 17.3045L17.4285 17.6997C16.8324 17.9381 16.1676 17.9381 15.5715 17.6997L15.25 17.571C14.4476 17.2501 13.5524 17.2501 12.75 17.571L12.4285 17.6997C11.8324 17.9381 11.1676 17.9381 10.5715 17.6997L9.58365 17.3045C9.23115 17.1635 9 16.8221 9 16.4424Z" /><rect width={9} height={9} x={14} y={4.70711} stroke="#4C4C4C" transform="rotate(45 14 4.70711)" /></g><rect width={8.03992} height={1} x={9.90906} y={4} fill="#4C4C4C" rx={0.5} /><rect width={0.909091} height={1} x={9.96326} y={2} fill="#FFDA27" /><rect width={0.909091} height={1} x={11.746} y={2} fill="#FFDA27" /><rect width={0.909091} height={1} x={13.5287} y={2} fill="#FFDA27" /><rect width={0.909091} height={1} x={15.3114} y={2} fill="#FFDA27" /><rect width={0.909091} height={1} x={17.0941} y={2} fill="#FFDA27" /><path stroke="black" strokeWidth={0.5} d="M12.5112 8.83582L13.929 10.9138" /><path fill="#D9D9D9" d="M15.009 8.36047L17.5486 10.7002H15.5489L15.009 8.36047Z" /><path fill="#D9D9D9" d="M11.5449 9.35999L10.3603 10.7778H11.3207L11.5449 9.35999Z" /><path fill="#D9D9D9" d="M14.3554 7.32971L11.746 10.3419L12.1711 10.3168C12.4091 10.3028 12.611 10.1372 12.6714 9.90655C12.716 9.73604 12.8395 9.59719 13.0037 9.53306L13.0919 9.49862C13.2721 9.42821 13.4155 9.2869 13.4886 9.10773L13.6128 8.80298C13.6803 8.63741 13.8139 8.50756 13.9814 8.44477C14.2505 8.34382 14.4196 8.076 14.395 7.78956L14.3554 7.32971Z" /><path fill="#FFDA27" d="M11.3296 10.7974H16.6704C16.6704 11.4945 16.1052 12.0597 15.4081 12.0597H12.5919C11.8948 12.0597 11.3296 11.4945 11.3296 10.7974Z" /></g><defs><clipPath id="clip0_25_275"><rect width={28} height={20} fill="white" /></clipPath></defs></svg>;
+export default EsPremiaMar;

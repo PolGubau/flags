@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
 
     steps:
       # Checkout el código con historial suficiente
@@ -24,13 +24,13 @@ jobs:
 
       # Instala pnpm
       - name: Setup pnpm
-        run: |
-          npm install -g pnpm
+        run: npm install -g pnpm
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: "20"
+          cache: "pnpm"
 
       - name: Authenticate with npm
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
@@ -38,6 +38,16 @@ jobs:
       # Instala dependencias del monorepo
       - name: Install dependencies
         run: pnpm install
+
+      # Incrementa la versión automáticamente
+      - name: Bump version
+        id: bump_version
+        run: |
+          PACKAGE_PATH=packages/flags/package.json
+          VERSION=$(jq -r '.version' $PACKAGE_PATH)
+          NEW_VERSION=$(echo $VERSION | awk -F. -v OFS=. '{$NF++; print}')
+          jq ".version = \"$NEW_VERSION\"" $PACKAGE_PATH > tmp.json && mv tmp.json $PACKAGE_PATH
+          echo "New version: $NEW_VERSION"
 
       # Compila el paquete
       - name: Build the package
@@ -47,5 +57,13 @@ jobs:
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish packages/flags --access public
+
+      # Confirma el cambio de versión en git
+      - name: Commit version bump
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add packages/flags/package.json
+          git commit -m "ci: bump version to $NEW_VERSION"
+          git push origin main

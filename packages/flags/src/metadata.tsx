@@ -1450,6 +1450,11 @@ export const flags: FlagData[] = [
         // flag: EsTarragona as FC<ComponentProps<"svg"> & SVGRProps>,
     },
     {
+        name: "Premià (Mar)",
+        type: "city",
+        code: "EsPremiaMar",
+    },
+    {
         name: "Ourense",
         type: "city",
         code: "EsOurense",
@@ -1478,5 +1483,10 @@ export const flags: FlagData[] = [
         type: "symbol",
         code: "Lgtb",
         // flag: Lgtb as FC<ComponentProps<"svg"> & SVGRProps>,
+    },
+    {
+        name: "Peace",
+        type: "symbol",
+        code: "Peace",
     },
 ];
