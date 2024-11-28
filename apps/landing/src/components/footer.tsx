@@ -26,7 +26,7 @@ const Footer = () => {
             href={"https://github.com/PolGubau"}
             className="flex items-center gap-1"
           >
-            <IconButton>
+            <IconButton aria-label="Github">
               <FaGithub size={18} />
             </IconButton>
             Github
@@ -36,7 +36,7 @@ const Footer = () => {
             href={"https://polgubau.com/"}
             className="flex items-center gap-1"
           >
-            <IconButton>
+            <IconButton aria-label="Website">
               <TbWorld size={18} />
             </IconButton>
             Website
