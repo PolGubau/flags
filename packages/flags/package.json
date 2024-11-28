@@ -1,46 +1,46 @@
 {
-    "name": "react-beauty-flags",
-    "version": "1.0.1",
-    "license": "MIT",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "files": [
-        "dist/"
-    ],
-    "scripts": {
-        "get-figma": "ts-node ./scripts/getFromFigma.ts",
-        "prepublishOnly": "npm run build",
-        "prebuild": "rimraf ./dist",
-        "build": "npm run build-flags && ts-node ./scripts/build.ts && tsc --outDir dist",
-        "build-flags": "rimraf ./src/flags ./optimized/flags && svgo --config ./svgo.flags.config.js -f ./resources/flags -o ./optimized --pretty --indent=2",
-        "test": "npm run build && jest",
-        "update-icons": "npm run get-figma && npm run build-flags",
-        "build-watch": "npm run build-flags && tsc -w",
-        "check-flags": "ts-node ./scripts/checkFlags.ts"
-    },
-    "devDependencies": {
-        "@babel/preset-env": "^7.16.11",
-        "@babel/preset-react": "^7.16.7",
-        "@svgr/core": "^6.2.1",
-        "@testing-library/react": "^12.1.3",
-        "@types/jest": "^27.4.0",
-        "@types/rimraf": "^3.0.2",
-        "@typescript-eslint/eslint-plugin": "^5.12.0",
-        "@typescript-eslint/parser": "^5.12.0",
-        "babel-jest": "^27.5.1",
-        "camelcase": "^6.0.0",
-        "eslint": "^8.9.0",
-        "jest": "^27.5.1",
-        "rimraf": "^3.0.2",
-        "svgo": "^2.8.0",
-        "ts-jest": "^27.1.3",
-        "ts-node": "^10.5.0",
-        "typescript": "^4.5.5"
-    },
-    "peerDependencies": {
-        "react": "^18"
-    },
-    "dependencies": {
-        "dotenv": "^16.4.5"
-    }
+  "name": "react-beauty-flags",
+  "version": "1.0.2",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "get-figma": "ts-node ./scripts/getFromFigma.ts",
+    "prepublishOnly": "npm run build",
+    "prebuild": "rimraf ./dist",
+    "build": "npm run build-flags && ts-node ./scripts/build.ts && tsc --outDir dist",
+    "build-flags": "rimraf ./src/flags ./optimized/flags && svgo --config ./svgo.flags.config.js -f ./resources/flags -o ./optimized --pretty --indent=2",
+    "test": "npm run build && jest",
+    "update-icons": "npm run get-figma && npm run build-flags",
+    "build-watch": "npm run build-flags && tsc -w",
+    "check-flags": "ts-node ./scripts/checkFlags.ts"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@svgr/core": "^6.2.1",
+    "@testing-library/react": "^12.1.3",
+    "@types/jest": "^27.4.0",
+    "@types/rimraf": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "babel-jest": "^27.5.1",
+    "camelcase": "^6.0.0",
+    "eslint": "^8.9.0",
+    "jest": "^27.5.1",
+    "rimraf": "^3.0.2",
+    "svgo": "^2.8.0",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "react": "^18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
 }
