@@ -59,10 +59,11 @@ const Panel = ({ flag }: { flag: FlagData }) => {
       <FlagPreview code={code} />
 
       <article className="flex flex-col gap-1">
-        <p className="text-lg font-semibold pt-6">Usage</p>
+        <h3 className="text-lg font-semibold pt-6">Usage</h3>
         <small>Choose your desired way:</small>
 
         <Tabs
+          tabClassName="max-sm:text-sm"
           tabs={[
             {
               name: "Use Flag Component",
@@ -77,7 +78,8 @@ const Panel = ({ flag }: { flag: FlagData }) => {
                       )
                     }
                   >
-                    {`import { Flag } from "react-beauty-flags"`}
+                    <span className="truncate">{`import { Flag } from "react-beauty-flags"`}</span>
+
                     <TbClipboard size={17} />
                   </pre>
                   <pre
@@ -86,7 +88,7 @@ const Panel = ({ flag }: { flag: FlagData }) => {
                       handleClick(code, `<Flag code="${code}" ${className}/>`)
                     }
                   >
-                    {`<Flag code="${code}" ${className}/>`}
+                    <span className="truncate">{`<Flag code="${code}" ${className}/>`}</span>
                     <TbClipboard size={17} />
                   </pre>
                 </div>
@@ -105,14 +107,14 @@ const Panel = ({ flag }: { flag: FlagData }) => {
                       )
                     }
                   >
-                    {`import { ${code} } from "react-beauty-flags"`}
+                    <span className="truncate">{`import { ${code} } from "react-beauty-flags"`}</span>
                     <TbClipboard size={17} />
                   </pre>
                   <pre
                     className=" grid grid-cols-[1fr,auto] gap-1 items-center text-sm bg-secondary-200 dark:bg-secondary-800 hover:opacity-80 transition-opacity py-3 px-4  rounded-xl cursor-pointer"
                     onClick={() => handleClick(code, `<${code} ${className}/>`)}
                   >
-                    {`<${code} ${className}/>`}
+                    <span className="truncate">{`<${code} ${className}/>`}</span>
                     <TbClipboard size={17} />
                   </pre>
                 </div>

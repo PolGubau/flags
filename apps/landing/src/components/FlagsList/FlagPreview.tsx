@@ -21,7 +21,7 @@ const FlagPreview = ({ code }: { code: FlagCode }) => {
   })
 
   return (
-    <div className="w-full grid grid-cols-[1fr,2fr] gap-8">
+    <div className="w-full grid sm:grid-cols-[1fr,2fr] gap-8">
       <Flag
         code={code}
         className={cn(

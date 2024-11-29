@@ -7,7 +7,7 @@ import FlagsList from "@/components/FlagsList/FlagsList"
 import NoResults from "@/components/FlagsList/NoResults"
 
 export default async function Home({ searchParams }: { searchParams: any }) {
-  const q = searchParams?.q || null
+  const q = searchParams?.q ?? null
 
   const filteredFlags: FlagData[] = flags.filter((flag) => {
     if (!q) return true
@@ -36,7 +36,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
 
         <CopySnippet />
       </header>
-      <div className="pb-20 space-y-20">
+      <div className="pb-20 gap-6 md:gap-20 flex flex-col items-center">
         <Filters />
         {filteredFlags.length > 0 ? (
           <FlagsList list={filteredFlags} />

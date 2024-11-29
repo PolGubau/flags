@@ -11,7 +11,7 @@ const Filters = () => {
   )
 
   return (
-    <div className=" w-full sticky top-0 z-10 grid md:grid-cols-2 gap-4">
+    <div className="w-full sticky top-0 z-10 flex justify-center max-w-md">
       <Input
         placeholder="Search for a flag"
         leftComponent={<TbSearch />}
