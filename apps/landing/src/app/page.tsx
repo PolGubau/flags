@@ -21,7 +21,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
   })
 
   return (
-    <main className="w-full min-h-dvh">
+    <main className="w-full">
       <header className="flex flex-col gap-10 justify-center items-center pb-20">
         <ExampleFlags />
 

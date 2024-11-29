@@ -7,7 +7,7 @@ import Docs from "@/app/markdown/docs.mdx"
 
 const Page = () => {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col w-full max-w-screen">
       <Link
         href="/"
         passHref
