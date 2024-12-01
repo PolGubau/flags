@@ -20,6 +20,30 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "React Beauty Flags",
   description: "Fancy flags from around the world",
+  applicationName: "React Beauty Flags",
+  authors: [{ name: "Pol Gubau Amores", url: "https://polgubau.com" }],
+  generator: "React",
+  keywords: [
+    "react",
+    "flags",
+    "beauty",
+    "design",
+    "ui",
+    "ux",
+    "polgubau",
+    "pol",
+    "gubau",
+    "amores",
+  ],
+  creator: "Pol Gubau Amores",
+  publisher: "Pol Gubau Amores",
+  robots: "index, follow",
+  icons: [
+    {
+      rel: "icon",
+      url: "/favicon.ico",
+    },
+  ],
 }
 
 export default function RootLayout({
