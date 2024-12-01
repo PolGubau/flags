@@ -1475,8 +1475,7 @@ export const flags: FlagData[] = [
     {
         name: "Republic of Spain",
         type: "historical",
-        code: "EsRepublica",
-        // flag: EsRepublica as FC<ComponentProps<"svg"> & SVGRProps>,
+        code: "EsRepublic",
     },
     {
         name: "LGTB",
@@ -1488,5 +1487,165 @@ export const flags: FlagData[] = [
         name: "Peace",
         type: "symbol",
         code: "Peace",
+    },
+    {
+        name: "Anarcapitalism",
+        type: "symbol",
+        code: "Anarcapitalism",
+    },
+    {
+        name: "Checkered",
+        type: "symbol",
+        code: "Checkered",
+    },
+    {
+        name: "Estelada Vermella",
+        type: "symbol",
+        code: "CatEsteladaRed",
+    },
+    {
+        name: "Cuba (Yara)",
+        type: "historical",
+        code: "CuYara",
+    },
+    {
+        name: "Aiguafreda",
+        type: "city",
+        code: "EsAiguafreda",
+    },
+    {
+        name: "Ametlla (Mar)",
+        type: "city",
+        code: "EsAmetllaMar",
+    },
+    {
+        name: "Argentona",
+        type: "city",
+        code: "EsArgentona",
+    },
+    {
+        name: "Barberà (Vallès)",
+        type: "city",
+        code: "EsBarberaValles",
+    },
+    {
+        name: "Barcelona (Shield)",
+        type: "city",
+        code: "EsBarcelonaShield",
+    },
+    {
+        name: "Besalú",
+        type: "city",
+        code: "EsBesalu",
+    },
+    {
+        name: "Blanes",
+        type: "city",
+        code: "EsBlanes",
+    },
+    {
+        name: "Ceuta",
+        type: "city",
+        code: "EsCeuta",
+    },
+    {
+        name: "Freiburg",
+        type: "city",
+        code: "DeFreiburg",
+    },
+    {
+        name: "Guardiona (Berguedà)",
+        type: "city",
+        code: "EsGuardionaBergueda",
+    },
+    {
+        name: "Hospitalet de Llobregat",
+        type: "city",
+        code: "EsHospitaletLlobregat",
+    },
+    {
+        name: "Brigadas Internacionales",
+        type: "historical",
+        code: "EsInterBrigades",
+    },
+    {
+        name: "Llicà (Vall)",
+        type: "city",
+        code: "EsLlicaVall",
+    },
+    {
+        name: "Logroño",
+        type: "city",
+        code: "EsLogroO",
+    },
+    {
+        name: "Martorell",
+        type: "city",
+        code: "EsMartorell",
+    },
+    {
+        name: "Matadepera",
+        type: "city",
+        code: "EsMatadepera",
+    },
+    {
+        name: "Melilla",
+        type: "city",
+        code: "EsMelilla",
+    },
+    {
+        name: "Menorca",
+        type: "city",
+        code: "EsMenorca",
+    },
+    {
+        name: "Nacionalismo Galego",
+        type: "symbol",
+        code: "EsNacionalismGal",
+    },
+    {
+        name: "Republicana Estrellada",
+        type: "symbol",
+        code: "EsRepublicStar",
+    },
+    {
+        name: "Sabadell",
+        type: "city",
+        code: "EsSabadell",
+    },
+    {
+        name: "Tenerife",
+        type: "city",
+        code: "EsTenerife",
+    },
+    {
+        name: "Terrassa",
+        type: "city",
+        code: "EsTerrassa",
+    },
+    {
+        name: "Vic",
+        type: "city",
+        code: "EsVic",
+    },
+    {
+        name: "Vigo",
+        type: "city",
+        code: "EsVigo",
+    },
+    {
+        name: "France (Free)",
+        type: "historical",
+        code: "FrFree",
+    },
+    {
+        name: "Imperial Japan",
+        type: "historical",
+        code: "ImperialJapan",
+    },
+    {
+        name: "Soviet Union",
+        type: "historical",
+        code: "SovietUnion",
     },
 ];

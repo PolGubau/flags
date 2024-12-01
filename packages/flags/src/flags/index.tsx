@@ -8,6 +8,7 @@ import { default as Ai} from "./Ai";
 import { default as Al} from "./Al";
 import { default as Am} from "./Am";
 import { default as An} from "./An";
+import { default as Anarcapitalism} from "./Anarcapitalism";
 import { default as Ao} from "./Ao";
 import { default as Aq} from "./Aq";
 import { default as Ar} from "./Ar";
@@ -38,11 +39,13 @@ import { default as Ca} from "./Ca";
 import { default as Caf} from "./Caf";
 import { default as Cas} from "./Cas";
 import { default as Cat} from "./Cat";
+import { default as CatEsteladaRed} from "./CatEsteladaRed";
 import { default as Cd} from "./Cd";
 import { default as Ceu} from "./Ceu";
 import { default as Cf} from "./Cf";
 import { default as Cg} from "./Cg";
 import { default as Ch} from "./Ch";
+import { default as Checkered} from "./Checkered";
 import { default as Ci} from "./Ci";
 import { default as Cl} from "./Cl";
 import { default as Cm} from "./Cm";
@@ -53,10 +56,12 @@ import { default as Coc} from "./Coc";
 import { default as Cr} from "./Cr";
 import { default as Csa} from "./Csa";
 import { default as Cu} from "./Cu";
+import { default as CuYara} from "./CuYara";
 import { default as Cv} from "./Cv";
 import { default as Cy} from "./Cy";
 import { default as Cz} from "./Cz";
 import { default as De} from "./De";
+import { default as DeFreiburg} from "./DeFreiburg";
 import { default as Dj} from "./Dj";
 import { default as Dk} from "./Dk";
 import { default as Dm} from "./Dm";
@@ -67,32 +72,59 @@ import { default as Ee} from "./Ee";
 import { default as Eg} from "./Eg";
 import { default as Er} from "./Er";
 import { default as Es} from "./Es";
+import { default as EsAiguafreda} from "./EsAiguafreda";
 import { default as EsAlmeria} from "./EsAlmeria";
+import { default as EsAmetllaMar} from "./EsAmetllaMar";
 import { default as EsAndalucia} from "./EsAndalucia";
 import { default as EsAragon} from "./EsAragon";
+import { default as EsArgentona} from "./EsArgentona";
 import { default as EsAsturias} from "./EsAsturias";
 import { default as EsBalear} from "./EsBalear";
+import { default as EsBarberaValles} from "./EsBarberaValles";
 import { default as EsBarcelona} from "./EsBarcelona";
+import { default as EsBarcelonaShield} from "./EsBarcelonaShield";
 import { default as EsBasco} from "./EsBasco";
+import { default as EsBesalu} from "./EsBesalu";
+import { default as EsBlanes} from "./EsBlanes";
 import { default as EsBorgona} from "./EsBorgona";
 import { default as EsCanarias} from "./EsCanarias";
 import { default as EsCantabria} from "./EsCantabria";
 import { default as EsCataluna} from "./EsCataluna";
+import { default as EsCeuta} from "./EsCeuta";
 import { default as EsExtremadura} from "./EsExtremadura";
+import { default as EsFreiburg} from "./EsFreiburg";
 import { default as EsGalicia} from "./EsGalicia";
 import { default as EsGirona} from "./EsGirona";
+import { default as EsGuardionaBergueda} from "./EsGuardionaBergueda";
+import { default as EsHospitaletLlobregat} from "./EsHospitaletLlobregat";
+import { default as EsInterBrigades} from "./EsInterBrigades";
 import { default as EsLeon} from "./EsLeon";
+import { default as EsLlicaVall} from "./EsLlicaVall";
+import { default as EsLogrono} from "./EsLogrono";
+import { default as EsLogroO} from "./EsLogroO";
 import { default as EsMadrid} from "./EsMadrid";
 import { default as EsMancha} from "./EsMancha";
+import { default as EsMartorell} from "./EsMartorell";
+import { default as EsMatadepera} from "./EsMatadepera";
 import { default as EsMataro} from "./EsMataro";
+import { default as EsMelilla} from "./EsMelilla";
+import { default as EsMenorca} from "./EsMenorca";
 import { default as EsMurcia} from "./EsMurcia";
+import { default as EsNacionalismGal} from "./EsNacionalismGal";
 import { default as EsNavarra} from "./EsNavarra";
 import { default as EsOurense} from "./EsOurense";
 import { default as EsPremiaMar} from "./EsPremiaMar";
+import { default as EsRepublic} from "./EsRepublic";
 import { default as EsRepublica} from "./EsRepublica";
+import { default as EsRepublicStar} from "./EsRepublicStar";
 import { default as EsRioja} from "./EsRioja";
+import { default as EsSabadell} from "./EsSabadell";
 import { default as EsTarragona} from "./EsTarragona";
+import { default as EsTenerife} from "./EsTenerife";
+import { default as EsTerrassa} from "./EsTerrassa";
 import { default as EsValencia} from "./EsValencia";
+import { default as EsVic} from "./EsVic";
+import { default as EsVigo} from "./EsVigo";
 import { default as Et} from "./Et";
 import { default as Eu} from "./Eu";
 import { default as Fi} from "./Fi";
@@ -100,6 +132,7 @@ import { default as Fj} from "./Fj";
 import { default as Fk} from "./Fk";
 import { default as Fm} from "./Fm";
 import { default as Fr} from "./Fr";
+import { default as FrFree} from "./FrFree";
 import { default as Ga} from "./Ga";
 import { default as Gb} from "./Gb";
 import { default as Gd} from "./Gd";
@@ -124,6 +157,7 @@ import { default as Id} from "./Id";
 import { default as Ie} from "./Ie";
 import { default as Il} from "./Il";
 import { default as Im} from "./Im";
+import { default as ImperialJapan} from "./ImperialJapan";
 import { default as In} from "./In";
 import { default as Iq} from "./Iq";
 import { default as Ir} from "./Ir";
@@ -213,6 +247,7 @@ import { default as Sl} from "./Sl";
 import { default as Sm} from "./Sm";
 import { default as Sn} from "./Sn";
 import { default as So} from "./So";
+import { default as SovietUnion} from "./SovietUnion";
 import { default as Sr} from "./Sr";
 import { default as St} from "./St";
 import { default as Sv} from "./Sv";
@@ -250,7 +285,7 @@ import { default as Zm} from "./Zm";
 import { default as Zw} from "./Zw";    
 
         
-export { Ad, Ae, Af, Ag, Ai, Al, Am, An, Ao, Aq, Ar, At, Au, Aw, Ax, Az, Ba, Bb, Bd, Be, Bf, Bg, Bh, Bi, Bj, Bm, Bn, Bo, Br, Bs, Bt, Bw, By, Bz, Ca, Caf, Cas, Cat, Cd, Ceu, Cf, Cg, Ch, Ci, Cl, Cm, Cn, Cna, Co, Coc, Cr, Csa, Cu, Cv, Cy, Cz, De, Dj, Dk, Dm, Do, Dz, Ec, Ee, Eg, Er, Es, EsAlmeria, EsAndalucia, EsAragon, EsAsturias, EsBalear, EsBarcelona, EsBasco, EsBorgona, EsCanarias, EsCantabria, EsCataluna, EsExtremadura, EsGalicia, EsGirona, EsLeon, EsMadrid, EsMancha, EsMataro, EsMurcia, EsNavarra, EsOurense, EsPremiaMar, EsRepublica, EsRioja, EsTarragona, EsValencia, Et, Eu, Fi, Fj, Fk, Fm, Fr, Ga, Gb, Gd, Ge, Gg, Gh, Gi, Gl, Gm, Gn, Gq, Gr, Gt, Gw, Gy, Hk, Hn, Hr, Ht, Hu, Id, Ie, Il, Im, In, Iq, Ir, Is, It, Je, Jm, Jo, Jp, Ke, Kg, Kh, Km, Kn, Kp, Kr, Kw, Ky, Kz, La, Lb, Lc, Lgtb, Li, Lk, Lr, Ls, Lt, Lu, Lv, Ly, Ma, Mc, Md, Me, Mg, Mk, Ml, Mm, Mn, Mo, Mr, Ms, Mt, Mu, Mv, Mw, Mx, My, Mz, Na, Ne, Ng, Ni, Nl, No, Np, Nz, Om, Pa, Pe, Peace, Pf, Pg, Ph, Pk, Pl, Pr, Pt, Pw, Py, Qa, Ro, Rs, Ru, Rw, Sa, Sb, Sc, Sd, Se, Sg, Sh, Si, Sk, Sl, Sm, Sn, So, Sr, St, Sv, Sy, Sz, Tc, Td, Tg, Th, Tj, Tl, Tm, Tn, To, Tr, Tt, Tw, Tz, Ua, Ug, Us, Uy, Uz, Va, Vc, Ve, Vg, Vn, Vu, Ws, Ww, Ye, Za, Zm, Zw };
+export { Ad, Ae, Af, Ag, Ai, Al, Am, An, Anarcapitalism, Ao, Aq, Ar, At, Au, Aw, Ax, Az, Ba, Bb, Bd, Be, Bf, Bg, Bh, Bi, Bj, Bm, Bn, Bo, Br, Bs, Bt, Bw, By, Bz, Ca, Caf, Cas, Cat, CatEsteladaRed, Cd, Ceu, Cf, Cg, Ch, Checkered, Ci, Cl, Cm, Cn, Cna, Co, Coc, Cr, Csa, Cu, CuYara, Cv, Cy, Cz, De, DeFreiburg, Dj, Dk, Dm, Do, Dz, Ec, Ee, Eg, Er, Es, EsAiguafreda, EsAlmeria, EsAmetllaMar, EsAndalucia, EsAragon, EsArgentona, EsAsturias, EsBalear, EsBarberaValles, EsBarcelona, EsBarcelonaShield, EsBasco, EsBesalu, EsBlanes, EsBorgona, EsCanarias, EsCantabria, EsCataluna, EsCeuta, EsExtremadura, EsFreiburg, EsGalicia, EsGirona, EsGuardionaBergueda, EsHospitaletLlobregat, EsInterBrigades, EsLeon, EsLlicaVall, EsLogrono, EsLogroO, EsMadrid, EsMancha, EsMartorell, EsMatadepera, EsMataro, EsMelilla, EsMenorca, EsMurcia, EsNacionalismGal, EsNavarra, EsOurense, EsPremiaMar, EsRepublic, EsRepublica, EsRepublicStar, EsRioja, EsSabadell, EsTarragona, EsTenerife, EsTerrassa, EsValencia, EsVic, EsVigo, Et, Eu, Fi, Fj, Fk, Fm, Fr, FrFree, Ga, Gb, Gd, Ge, Gg, Gh, Gi, Gl, Gm, Gn, Gq, Gr, Gt, Gw, Gy, Hk, Hn, Hr, Ht, Hu, Id, Ie, Il, Im, ImperialJapan, In, Iq, Ir, Is, It, Je, Jm, Jo, Jp, Ke, Kg, Kh, Km, Kn, Kp, Kr, Kw, Ky, Kz, La, Lb, Lc, Lgtb, Li, Lk, Lr, Ls, Lt, Lu, Lv, Ly, Ma, Mc, Md, Me, Mg, Mk, Ml, Mm, Mn, Mo, Mr, Ms, Mt, Mu, Mv, Mw, Mx, My, Mz, Na, Ne, Ng, Ni, Nl, No, Np, Nz, Om, Pa, Pe, Peace, Pf, Pg, Ph, Pk, Pl, Pr, Pt, Pw, Py, Qa, Ro, Rs, Ru, Rw, Sa, Sb, Sc, Sd, Se, Sg, Sh, Si, Sk, Sl, Sm, Sn, So, SovietUnion, Sr, St, Sv, Sy, Sz, Tc, Td, Tg, Th, Tj, Tl, Tm, Tn, To, Tr, Tt, Tw, Tz, Ua, Ug, Us, Uy, Uz, Va, Vc, Ve, Vg, Vn, Vu, Ws, Ww, Ye, Za, Zm, Zw };
     
 export enum FlagsCodesEnum {
     Ad = "Ad",
@@ -261,6 +296,7 @@ Ai = "Ai",
 Al = "Al",
 Am = "Am",
 An = "An",
+Anarcapitalism = "Anarcapitalism",
 Ao = "Ao",
 Aq = "Aq",
 Ar = "Ar",
@@ -291,11 +327,13 @@ Ca = "Ca",
 Caf = "Caf",
 Cas = "Cas",
 Cat = "Cat",
+CatEsteladaRed = "CatEsteladaRed",
 Cd = "Cd",
 Ceu = "Ceu",
 Cf = "Cf",
 Cg = "Cg",
 Ch = "Ch",
+Checkered = "Checkered",
 Ci = "Ci",
 Cl = "Cl",
 Cm = "Cm",
@@ -306,10 +344,12 @@ Coc = "Coc",
 Cr = "Cr",
 Csa = "Csa",
 Cu = "Cu",
+CuYara = "CuYara",
 Cv = "Cv",
 Cy = "Cy",
 Cz = "Cz",
 De = "De",
+DeFreiburg = "DeFreiburg",
 Dj = "Dj",
 Dk = "Dk",
 Dm = "Dm",
@@ -320,32 +360,59 @@ Ee = "Ee",
 Eg = "Eg",
 Er = "Er",
 Es = "Es",
+EsAiguafreda = "EsAiguafreda",
 EsAlmeria = "EsAlmeria",
+EsAmetllaMar = "EsAmetllaMar",
 EsAndalucia = "EsAndalucia",
 EsAragon = "EsAragon",
+EsArgentona = "EsArgentona",
 EsAsturias = "EsAsturias",
 EsBalear = "EsBalear",
+EsBarberaValles = "EsBarberaValles",
 EsBarcelona = "EsBarcelona",
+EsBarcelonaShield = "EsBarcelonaShield",
 EsBasco = "EsBasco",
+EsBesalu = "EsBesalu",
+EsBlanes = "EsBlanes",
 EsBorgona = "EsBorgona",
 EsCanarias = "EsCanarias",
 EsCantabria = "EsCantabria",
 EsCataluna = "EsCataluna",
+EsCeuta = "EsCeuta",
 EsExtremadura = "EsExtremadura",
+EsFreiburg = "EsFreiburg",
 EsGalicia = "EsGalicia",
 EsGirona = "EsGirona",
+EsGuardionaBergueda = "EsGuardionaBergueda",
+EsHospitaletLlobregat = "EsHospitaletLlobregat",
+EsInterBrigades = "EsInterBrigades",
 EsLeon = "EsLeon",
+EsLlicaVall = "EsLlicaVall",
+EsLogrono = "EsLogrono",
+EsLogroO = "EsLogroO",
 EsMadrid = "EsMadrid",
 EsMancha = "EsMancha",
+EsMartorell = "EsMartorell",
+EsMatadepera = "EsMatadepera",
 EsMataro = "EsMataro",
+EsMelilla = "EsMelilla",
+EsMenorca = "EsMenorca",
 EsMurcia = "EsMurcia",
+EsNacionalismGal = "EsNacionalismGal",
 EsNavarra = "EsNavarra",
 EsOurense = "EsOurense",
 EsPremiaMar = "EsPremiaMar",
+EsRepublic = "EsRepublic",
 EsRepublica = "EsRepublica",
+EsRepublicStar = "EsRepublicStar",
 EsRioja = "EsRioja",
+EsSabadell = "EsSabadell",
 EsTarragona = "EsTarragona",
+EsTenerife = "EsTenerife",
+EsTerrassa = "EsTerrassa",
 EsValencia = "EsValencia",
+EsVic = "EsVic",
+EsVigo = "EsVigo",
 Et = "Et",
 Eu = "Eu",
 Fi = "Fi",
@@ -353,6 +420,7 @@ Fj = "Fj",
 Fk = "Fk",
 Fm = "Fm",
 Fr = "Fr",
+FrFree = "FrFree",
 Ga = "Ga",
 Gb = "Gb",
 Gd = "Gd",
@@ -377,6 +445,7 @@ Id = "Id",
 Ie = "Ie",
 Il = "Il",
 Im = "Im",
+ImperialJapan = "ImperialJapan",
 In = "In",
 Iq = "Iq",
 Ir = "Ir",
@@ -466,6 +535,7 @@ Sl = "Sl",
 Sm = "Sm",
 Sn = "Sn",
 So = "So",
+SovietUnion = "SovietUnion",
 Sr = "Sr",
 St = "St",
 Sv = "Sv",
@@ -515,6 +585,7 @@ Ai: Ai,
 Al: Al,
 Am: Am,
 An: An,
+Anarcapitalism: Anarcapitalism,
 Ao: Ao,
 Aq: Aq,
 Ar: Ar,
@@ -545,11 +616,13 @@ Ca: Ca,
 Caf: Caf,
 Cas: Cas,
 Cat: Cat,
+CatEsteladaRed: CatEsteladaRed,
 Cd: Cd,
 Ceu: Ceu,
 Cf: Cf,
 Cg: Cg,
 Ch: Ch,
+Checkered: Checkered,
 Ci: Ci,
 Cl: Cl,
 Cm: Cm,
@@ -560,10 +633,12 @@ Coc: Coc,
 Cr: Cr,
 Csa: Csa,
 Cu: Cu,
+CuYara: CuYara,
 Cv: Cv,
 Cy: Cy,
 Cz: Cz,
 De: De,
+DeFreiburg: DeFreiburg,
 Dj: Dj,
 Dk: Dk,
 Dm: Dm,
@@ -574,32 +649,59 @@ Ee: Ee,
 Eg: Eg,
 Er: Er,
 Es: Es,
+EsAiguafreda: EsAiguafreda,
 EsAlmeria: EsAlmeria,
+EsAmetllaMar: EsAmetllaMar,
 EsAndalucia: EsAndalucia,
 EsAragon: EsAragon,
+EsArgentona: EsArgentona,
 EsAsturias: EsAsturias,
 EsBalear: EsBalear,
+EsBarberaValles: EsBarberaValles,
 EsBarcelona: EsBarcelona,
+EsBarcelonaShield: EsBarcelonaShield,
 EsBasco: EsBasco,
+EsBesalu: EsBesalu,
+EsBlanes: EsBlanes,
 EsBorgona: EsBorgona,
 EsCanarias: EsCanarias,
 EsCantabria: EsCantabria,
 EsCataluna: EsCataluna,
+EsCeuta: EsCeuta,
 EsExtremadura: EsExtremadura,
+EsFreiburg: EsFreiburg,
 EsGalicia: EsGalicia,
 EsGirona: EsGirona,
+EsGuardionaBergueda: EsGuardionaBergueda,
+EsHospitaletLlobregat: EsHospitaletLlobregat,
+EsInterBrigades: EsInterBrigades,
 EsLeon: EsLeon,
+EsLlicaVall: EsLlicaVall,
+EsLogrono: EsLogrono,
+EsLogroO: EsLogroO,
 EsMadrid: EsMadrid,
 EsMancha: EsMancha,
+EsMartorell: EsMartorell,
+EsMatadepera: EsMatadepera,
 EsMataro: EsMataro,
+EsMelilla: EsMelilla,
+EsMenorca: EsMenorca,
 EsMurcia: EsMurcia,
+EsNacionalismGal: EsNacionalismGal,
 EsNavarra: EsNavarra,
 EsOurense: EsOurense,
 EsPremiaMar: EsPremiaMar,
+EsRepublic: EsRepublic,
 EsRepublica: EsRepublica,
+EsRepublicStar: EsRepublicStar,
 EsRioja: EsRioja,
+EsSabadell: EsSabadell,
 EsTarragona: EsTarragona,
+EsTenerife: EsTenerife,
+EsTerrassa: EsTerrassa,
 EsValencia: EsValencia,
+EsVic: EsVic,
+EsVigo: EsVigo,
 Et: Et,
 Eu: Eu,
 Fi: Fi,
@@ -607,6 +709,7 @@ Fj: Fj,
 Fk: Fk,
 Fm: Fm,
 Fr: Fr,
+FrFree: FrFree,
 Ga: Ga,
 Gb: Gb,
 Gd: Gd,
@@ -631,6 +734,7 @@ Id: Id,
 Ie: Ie,
 Il: Il,
 Im: Im,
+ImperialJapan: ImperialJapan,
 In: In,
 Iq: Iq,
 Ir: Ir,
@@ -720,6 +824,7 @@ Sl: Sl,
 Sm: Sm,
 Sn: Sn,
 So: So,
+SovietUnion: SovietUnion,
 Sr: Sr,
 St: St,
 Sv: Sv,
