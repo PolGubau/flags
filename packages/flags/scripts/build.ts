@@ -142,13 +142,6 @@ export const FlagsEnum: Record<FlagCode, React.FC<React.SVGProps<SVGSVGElement>>
     ${icons.map(({ componentName }) => `${componentName}: ${componentName}`).join(",\n")}
 };
 
-interface FlagProps extends React.SVGProps<SVGSVGElement> {
-    code: FlagCode;
-}
-export const Flag = ({ code, ...props }: FlagProps) => {
-    const Component = FlagsEnum[code];
-    return <Component {...props} />;
-};
 `,
         "utf8",
     );
