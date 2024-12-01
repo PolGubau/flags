@@ -2,7 +2,7 @@
 
 import React from "react"
 import { parseAsString, useQueryStates } from "nuqs"
-import { Tabs, toast, useCopyToClipboard } from "pol-ui"
+import { DialogTitle, Tabs, toast, useCopyToClipboard } from "pol-ui"
 import { Flag, FlagCode, FlagData } from "react-beauty-flags"
 import { TbClipboard } from "react-icons/tb"
 
@@ -52,8 +52,8 @@ const Panel = ({ flag }: { flag: FlagData }) => {
   return (
     <div className="flex flex-col gap-4 mt-6">
       <hgroup className="flex flex-col gap-1">
-        <h3 className="text-2xl">{name}</h3>
-        <h4 className="opacity-80 capitalize">{type}</h4>
+        <DialogTitle className="text-2xl">{name}</DialogTitle>
+        <h3 className="opacity-80 capitalize">{type}</h3>
       </hgroup>
 
       <FlagPreview code={code} />

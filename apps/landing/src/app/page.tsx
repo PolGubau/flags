@@ -13,11 +13,13 @@ export default async function Home({ searchParams }: { searchParams: any }) {
     if (!q) return true
     const stringifiedQ = Array.isArray(q) ? q.join("") : q
     const search = stringifiedQ.toLowerCase()
-    return (
+
+    const matchs =
       flag.name.toLowerCase().includes(search) ||
       flag.code.toLowerCase().includes(search) ||
       flag.type.toLowerCase().includes(search)
-    )
+
+    return matchs
   })
 
   return (

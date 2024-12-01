@@ -5,11 +5,13 @@ export interface SVGRProps {
     descId?: string;
 }
 
-export type FlagType =
-    | "country"
-    | "region"
-    | "world"
-    | "historical"
-    | "city"
-    | "symbol"
-    | "other";
+export enum FlagTypeEnum {
+    Country = "country",
+    Region = "region",
+    World = "world",
+    Historical = "historical",
+    City = "city",
+    Symbol = "symbol",
+    Other = "other",
+}
+export type FlagType = `${FlagTypeEnum}`;

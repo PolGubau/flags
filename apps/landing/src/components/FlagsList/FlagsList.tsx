@@ -2,7 +2,7 @@
 
 import { parseAsString, useQueryStates } from "nuqs"
 import { Drawer, cn, groupBy } from "pol-ui"
-import { Flag, type FlagData } from "react-beauty-flags"
+import { Flag, FlagTypeEnum, type FlagData } from "react-beauty-flags"
 
 import Panel from "./panel"
 
@@ -12,6 +12,12 @@ interface FlagsListProps {
 const FlagsList = ({ list }: FlagsListProps) => {
   const grouped = groupBy(list, (flag) => flag.type)
 
+  const orderedGrouped = Object.entries(grouped).sort(([a], [b]) => {
+    if (a === FlagTypeEnum.Country) return -1
+    if (b === FlagTypeEnum.Country) return 1
+    return a.localeCompare(b)
+  })
+
   const [style] = useQueryStates({
     rounded: parseAsString.withDefault("rounded-xl"),
     shadow: parseAsString.withDefault("shadow-md"),
@@ -20,7 +26,7 @@ const FlagsList = ({ list }: FlagsListProps) => {
   return (
     <main className="flex flex-col gap-4 items-center w-full">
       <section className="flex flex-col gap-20 items-center w-full">
-        {Object.entries(grouped).map(([key, values]) => (
+        {orderedGrouped.map(([key, values]) => (
           <section
             key={key}
             className="flex flex-col gap-4 items-center w-full"
