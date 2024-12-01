@@ -16,7 +16,7 @@ const FlagPreview = ({ code }: { code: FlagCode }) => {
   }
   const [style, setStyle] = useQueryStates({
     rounded: parseAsString.withDefault(options.rounded[1]),
-    shadow: parseAsString.withDefault(options.shadow[1]),
+    shadow: parseAsString.withDefault(options.shadow[0]),
     border: parseAsString.withDefault(options.border[2]),
   })
 
