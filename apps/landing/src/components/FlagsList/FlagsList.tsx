@@ -18,10 +18,11 @@ const FlagsList = ({ list }: FlagsListProps) => {
     return a.localeCompare(b)
   })
 
-  const [style] = useQueryStates({
+  const [params, setParams] = useQueryStates({
     rounded: parseAsString.withDefault("rounded-xl"),
     shadow: parseAsString.withDefault("shadow-md"),
     border: parseAsString.withDefault("border-4"),
+    s: parseAsString,
   })
   return (
     <main className="flex flex-col gap-4 items-center w-full">
@@ -36,17 +37,26 @@ const FlagsList = ({ list }: FlagsListProps) => {
               {values.map(({ code, name, type }) => (
                 <li key={code} className="flex justify-center">
                   <Drawer
+                    open={params.s === code}
+                    onOpenChange={(open) => {
+                      if (!open) setParams({ s: null })
+                    }}
                     direction="right"
                     className="bg-secondary-50 w-[600px] p-8 max-w-[90vw]"
                     trigger={
-                      <button className="group flex items-center flex-col outline-none gap-1 relative">
+                      <button
+                        className="group flex items-center flex-col outline-none gap-1 relative"
+                        onClick={() => {
+                          setParams({ s: code })
+                        }}
+                      >
                         <Flag
                           code={code}
                           className={cn(
                             "w-fit group-focus:scale-90 group-focus-within:border-primary group-focus-within:border-6 hover:scale-95 group-active:scale-75 transition-[transform,border] duration-50 ease-in-out z-10",
-                            style.rounded,
-                            style.shadow,
-                            style.border
+                            params.rounded,
+                            params.shadow,
+                            params.border
                           )}
                           height={70 / 1.4}
                           width={70}
