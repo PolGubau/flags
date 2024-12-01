@@ -37,7 +37,6 @@ export default App
 ### **Props**
 
 - **`code`** (string): The ISO code of the flag to display.
-- **`alt`** (string): Accessible alternative text for the flag.
 - **`size`** (number | string, optional): Set the flag's width (height adjusts automatically).
 
 All native svg's props can also be passed.
@@ -49,7 +48,8 @@ React Beauty Flags includes:
 - Country flags
 - Regional flags
 - City flags
-- Historical and symbolic flags
+- Historical
+- Symbolic flags
 
 For a complete list, visit [Flags Directory](https://flags.polgubau.com/).
 
@@ -69,7 +69,7 @@ This project is open source under the MIT License.
 
 - 🌐 [Website](https://flags.polgubau.com/)
 - 📦 [npm Package](https://www.npmjs.com/package/react-beauty-flags)
-- 🐙 [GitHub Repository](https://github.com/polgubau/react-beauty-flags)
+- 🐙 [GitHub Repository](https://github.com/PolGubau/flags)
 
 ---
 
