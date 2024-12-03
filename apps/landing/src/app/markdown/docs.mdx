@@ -1,6 +1,6 @@
 # Documentation
 
-**React Beauty Flags** is a simple React library that renders a handmade flag of a country. It provides an easy way to display flags in your React applications with minimal setup.
+**React Beauty Flags** is a simple React library that renders handmade flags for different topics as countries or cities. It provides an easy way to display flags in your React applications with minimal setup.
 
 ## Goal
 
@@ -12,16 +12,25 @@ You will find +250 flags, including countries, regions, cities, and symbols. The
 
 If you develop a bank or financial application, this might not be the best choice for you. However, if you are building a beautiful with modern UX design, this library is perfect for you. 😀
 
+## Features
+
+- **Beautiful Designs**: The flags are handmade designed with a unique style that makes them visually appealing.
+- **Easy to Use**: The library is simple to use and requires minimal setup.
+- **Customizable**: You can customize the size of the flags by passing the width and height props, as well as other standard SVG props.
+- **Utility Functions**: The library includes utility functions to help you work with flags, such as getting flag data by code or name.
+- **Typescript Support**: The library is written in TypeScript, providing type safety and autocompletion in your IDE.
+
 ## Installation
 
 To install React Beauty Flags, use your package manager of choice:
 
-```jsx
+```bash
 pnpm install react-beauty-flags
 ```
 
-You can also use `npm` or `yarn`:
+You can also use _npm_ or _yarn_:
 
+<div className='gap-4 grid md:grid-cols-2'>
 ```bash
 yarn add react-beauty-flags
 ```
@@ -30,9 +39,11 @@ yarn add react-beauty-flags
 npm install react-beauty-flags
 ```
 
+</div>
+
 ## Usage
 
-To use React Beauty Flags in your application, import the **`Flag`** component and pass the **`code`** prop to specify the country:
+To use React Beauty Flags in your application, import the **Flag** component and pass the **code** prop to specify the country:
 
 ```jsx
 import Flag from "react-beauty-flags"
@@ -44,9 +55,21 @@ const App = () => {
 export default App
 ```
 
+If you want to enforce the flag code, you can use the **FlagsCodesEnum**:
+
+```jsx
+import Flag, { FlagsCodesEnum } from "react-beauty-flags"
+
+export const App = () => {
+  return <Flag code={FlagsCodesEnum.ES} /> // Ts will enforce a correct code
+}
+```
+
+### Customizing the Size
+
 The Flag is rendered by default with a width of **28px** and a height of **20px** (aspect ratio 1.4).
 
-To customize the size, you can pass the **width** and **height** props, even if you can pass all desired sizes, to keep the aspect ratio you can keep this relation (width = height \* 1.4).
+To customize the size, feel free to can pass both **width** and **height** props, even if you can pass any desired size, I heighly recommend keeping the aspect ratio (for possible shadows or bg colors) you can keep this relation using this formula (width = height \* 1.4).
 
 To use a scale factor, you can multiply the default size by the desired factor:
 
@@ -66,15 +89,49 @@ The easier way to change the size is to pass the width and height props directly
 <Flag code="Es" width={200} height={140} />
 ```
 
+## Direct Flag Render
+
+All flags are available as a direct render, an alternative to the **Flag** component. This is useful when you need to render the flag directly in your JSX without using a component.
+
+```jsx
+import { ES } from "react-beauty-flags"
+// Example in a component
+const App = () => {
+  return <ES />
+}
+
+// Example in a JSX
+const App = () => {
+  return <div>{ES}</div>
+}
+
+// Example in a styled component
+const StyledFlag = styled.ES`
+  width: 50px;
+  height: 50px;
+`
+
+
+// Example in a static object
+const flags = {
+  es: ES,
+  fr: FR,
+  // ...
+}
+
+// Those examples are equivalent to <Flag code="Es" /> but with more control
+```
+
 ## Props
 
-The **Flag** component accepts the following props:
+The **Flag** component and the **direct imports** accepts the following props:
 
-### code  (required)
+### code (required for the **Flag** component)
 
-- **Type**: **FlagCode**
-- **Description**: The unique code for the flag you want to display. This should be one of the keys in **`FlagsCodesEnum`**.
-- **Example**:
+- **Type**: FlagCode (string)
+- **Description**: The unique code for the flag you want to display. This should be one of the keys in **FlagsCodesEnum**.
+
+Example:
 
 ```jsx
 <Flag code="Fr" /> // Displays the French flag
@@ -82,12 +139,12 @@ The **Flag** component accepts the following props:
 
 ### Additional SVG Props
 
-The **Flag** component also accepts all standard SVG props, allowing for further customization.
+Flag component or any direct component render also accepts all standard SVG props, allowing for further customization.
 
-- **Example**:
+Example:
 
 ```jsx
-<Flag code="Jp" width={50} height={50} title="Japan Flag" />
+<Flag code="Jp" title="Japan Flag" role="img" id="japan-flag" />
 ```
 
 ## **Utility Functions**
@@ -96,9 +153,10 @@ React Beauty Flags comes with several utility functions to help you work with fl
 
 ### **getFlagByCode**
 
-- **Type**: **(code: FlagCode) => FlagData | undefined**
+- **Type**: (code: FlagCode) => FlagData | undefined
 - **Description**: Retrieves flag data by its code.
-- **Example**:
+
+Example:
 
 ```js
 import { getFlagByCode } from "react-beauty-flags"
@@ -109,9 +167,10 @@ console.log(japanFlag) // { code: "Jp", name: "Japan", type: "country" }
 
 ### getFlagByName
 
-- **Type**: **(name: string) => FlagData | undefined**
+- **Type**: (name: string) => FlagData | undefined
 - **Description**: Retrieves flag data by its name.
-- **Example**:
+
+Example:
 
 ```js
 import { getFlagByName } from "react-beauty-flags"
@@ -122,9 +181,10 @@ console.log(franceFlag) // { code: "Fr", name: "France", type: "country" }
 
 ### **getFlagsByType**
 
-- **Type**: **(type: FlagType) => FlagData[]**
+- **Type**: (type: FlagType) => FlagData[]
 - **Description**: Retrieves all flags of a specific type.
-- **Example**:
+
+Example:
 
 ```js
 import { getFlagsByType } from "react-beauty-flags"
@@ -136,6 +196,8 @@ console.log(countryFlags) // List of all country flags
 ## Types
 
 ### FlagType
+
+All flags are categorized into different types, this is also useful when you want to filter flags with the **getFlagsByType** function.
 
 The available flag types:
 
@@ -149,7 +211,7 @@ The available flag types:
 
 ### FlagCode
 
-A union type of all available flag codes.
+A union type of all available flag codes. (e.g. "Us", "Fr", "Jp", ...)
 
 ### FlagData
 
