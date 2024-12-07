@@ -1,4 +1,4 @@
-import { FlagData, flags } from "react-beauty-flags"
+import { flags, type FlagData } from "react-beauty-flags"
 
 import CopySnippet from "@/components/CopySnippet"
 import ExampleFlags from "@/components/ExampleFlags"
@@ -6,8 +6,12 @@ import Filters from "@/components/Filters/Filters"
 import FlagsList from "@/components/FlagsList/FlagsList"
 import NoResults from "@/components/FlagsList/NoResults"
 
-export default async function Home({ searchParams }: { searchParams: any }) {
-  const q = searchParams?.q ?? null
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+  const q = (await searchParams).q?.toString() ?? null
 
   const filteredFlags: FlagData[] = flags.filter((flag) => {
     if (!q) return true
@@ -43,7 +47,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
         {filteredFlags.length > 0 ? (
           <FlagsList list={filteredFlags} />
         ) : (
-          <NoResults q={searchParams.q?.toString() ?? ""} />
+          <NoResults q={q ?? ""} />
         )}
       </div>
     </main>

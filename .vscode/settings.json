@@ -4,5 +4,8 @@
   "eslint.nodePath": "node_modules",
   "[svg]": {
     "editor.defaultFormatter": "jock.svg"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
   }
 }
