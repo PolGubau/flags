@@ -1,8 +1,8 @@
 "use client";
 
-import React, { type PropsWithChildren } from "react";
 import Link from "next/link";
 import { Button } from "pol-ui";
+import React, { type PropsWithChildren } from "react";
 
 const LinkButton = (
 	props: PropsWithChildren<{

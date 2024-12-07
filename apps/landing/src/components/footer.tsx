@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import { Button, IconButton } from "pol-ui";
+import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { TbArrowUpRight, TbWorld } from "react-icons/tb";
 

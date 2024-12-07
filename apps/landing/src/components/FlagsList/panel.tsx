@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
 import { parseAsString, useQueryStates } from "nuqs";
 import { DialogTitle, Tabs, toast, useCopyToClipboard } from "pol-ui";
+import React from "react";
 import { Flag, type FlagCode, type FlagData } from "react-beauty-flags";
 import { TbClipboard } from "react-icons/tb";
 

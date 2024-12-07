@@ -1,4 +1,4 @@
 export enum SearchParams {
-  search = "q",
+	search = "q",
 }
-export type SearchParam = `${SearchParams}`
+export type SearchParam = `${SearchParams}`;

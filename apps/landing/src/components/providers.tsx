@@ -1,8 +1,8 @@
 "use client";
 
-import type { PropsWithChildren } from "react";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { DarkThemeToggle, PoluiProvider } from "pol-ui";
+import type { PropsWithChildren } from "react";
 
 const Providers = ({ children }: PropsWithChildren) => {
 	return (
