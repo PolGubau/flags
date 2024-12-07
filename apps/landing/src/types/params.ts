@@ -1,4 +1,4 @@
 export enum SearchParams {
-	search = "q",
+  Search = "q",
 }
 export type SearchParam = `${SearchParams}`;
