@@ -9,8 +9,8 @@
     </g>
     <path fill="#4C4C4C" fill-rule="evenodd" d="M0 12H28V8H0V12Z" clip-rule="evenodd"/>
     <path fill="#4C4C4C" fill-rule="evenodd" d="M0 0L13.3333 10L0 20V0Z" clip-rule="evenodd"/>
-    <path stroke="#FFDA27" stroke-width="1.33333" d="M-0.666585 17.3629V2.63721L9.5281 10L-0.666585 17.3629Z"/>
-    <path fill="#FFDA27" fill-rule="evenodd" d="M9.33325 10.6667H27.9999V9.33337H9.33325V10.6667Z" clip-rule="evenodd"/>
+    <path stroke="#FFDA27" stroke-width="1.33333" d="M-0.666707 17.3629V2.63721L9.52798 10L-0.666707 17.3629Z"/>
+    <path fill="#FFDA27" fill-rule="evenodd" d="M9.33337 10.6667H28V9.33337H9.33337V10.6667Z" clip-rule="evenodd"/>
   </g>
   <defs>
     <filter id="filter0_d_5_1804" width="28" height="8" x="0" y="12" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">

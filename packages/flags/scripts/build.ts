@@ -1,9 +1,9 @@
-import { promisify } from "util";
-import { promises as fs } from "fs";
+import { promises as fs } from "node:fs";
+import { promisify } from "node:util";
 
-import rimraf from "rimraf";
-import camelcase from "camelcase";
 import { transform as svgrTransform } from "@svgr/core";
+import camelcase from "camelcase";
+import rimraf from "rimraf";
 
 // Promisifies the `rimraf` module.
 const rimrafPromisified = promisify(rimraf);
@@ -20,23 +20,23 @@ const rimrafPromisified = promisify(rimraf);
  * @returns {Promise<string>}
  */
 const transform = async (
-    svg: string,
-    componentName: string,
+	svg: string,
+	componentName: string,
 ): Promise<string> => {
-    // original size is 28x20
-    return await svgrTransform(
-        svg,
-        {
-            typescript: true,
-            titleProp: true,
-            descProp: true,
-            svgProps: {
-                width: "{props.width ?? 28}",
-                height: "{props.height ?? 20}",
-            },
-        },
-        { componentName },
-    );
+	// original size is 28x20
+	return await svgrTransform(
+		svg,
+		{
+			typescript: true,
+			titleProp: true,
+			descProp: true,
+			svgProps: {
+				width: "{props.width ?? 28}",
+				height: "{props.height ?? 20}",
+			},
+		},
+		{ componentName },
+	);
 };
 
 /**
@@ -46,23 +46,23 @@ const transform = async (
  * @returns {Promise<{ svg: string, componentName: string }[]>}
  */
 const getIcons = async (
-    style: string,
+	style: string,
 ): Promise<{ svg: string; componentName: string }[]> => {
-    // The files from the directory that corresponds to the specified style.
-    const files = await fs.readdir(`./optimized`);
+	// The files from the directory that corresponds to the specified style.
+	const files = await fs.readdir("./optimized");
 
-    // dont include __jest-test.svg
-    const filteredFiles = files.filter((file) => file !== "__jest-test.svg");
+	// dont include __jest-test.svg
+	const filteredFiles = files.filter((file) => file !== "__jest-test.svg");
 
-    // Reads each file to get the code and name of the SVG.
-    return Promise.all(
-        filteredFiles.map(async (file) => ({
-            svg: await fs.readFile(`./optimized/${file}`, "utf8"),
-            componentName: `${camelcase(file.replace(/\.svg$/, ""), {
-                pascalCase: true,
-            })}`,
-        })),
-    );
+	// Reads each file to get the code and name of the SVG.
+	return Promise.all(
+		filteredFiles.map(async (file) => ({
+			svg: await fs.readFile(`./optimized/${file}`, "utf8"),
+			componentName: `${camelcase(file.replace(/\.svg$/, ""), {
+				pascalCase: true,
+			})}`,
+		})),
+	);
 };
 
 /**
@@ -73,19 +73,19 @@ const getIcons = async (
  * @returns {string} Returns the string to use for the index file.
  */
 const exportAll = (icons: { svg: string; componentName: string }[]): string => {
-    // export { ArFlag, ...
-    return `
+	// export { ArFlag, ...
+	return `
 export { ${icons.map(({ componentName }) => `${componentName}`).join(", ")} };`;
 };
 
 const importAll = (icons: { svg: string; componentName: string }[]): string => {
-    // get all flags from their files
-    return icons
-        .map(
-            ({ componentName }) =>
-                `import { default as ${componentName}} from "./${componentName}";`,
-        )
-        .join("\n");
+	// get all flags from their files
+	return icons
+		.map(
+			({ componentName }) =>
+				`import { default as ${componentName}} from "./${componentName}";`,
+		)
+		.join("\n");
 };
 /**
  * Creates the directories for the icons, converts them from SVG to React
@@ -95,37 +95,33 @@ const importAll = (icons: { svg: string; componentName: string }[]): string => {
  *
  */
 const buildIcons = async (style: string) => {
-    // The output directory is the style of the icon at the room of the
-    // project.
-    const outDir = `./${style}`;
+	// The output directory is the style of the icon at the room of the
+	// project.
+	const outDir = `./${style}`;
 
-    // Create the directories for the icons if they don't exist already.
-    await fs.mkdir(outDir, { recursive: true });
+	// Create the directories for the icons if they don't exist already.
+	await fs.mkdir(outDir, { recursive: true });
 
-    // Get all of the icons for the specified style.
-    const icons = await getIcons(style);
+	// Get all of the icons for the specified style.
+	const icons = await getIcons(style);
 
-    await Promise.all(
-        icons.flatMap(async ({ componentName, svg }) => {
-            // Get the code for the icon component.
-            const content = await transform(svg, componentName);
+	await Promise.all(
+		icons.flatMap(async ({ componentName, svg }) => {
+			// Get the code for the icon component.
+			const content = await transform(svg, componentName);
 
-            // Write the icon component to the directory.
-            return [
-                fs.writeFile(
-                    `./${outDir}/${componentName}.tsx`,
-                    content,
-                    "utf8",
-                ),
-            ];
-        }),
-    );
+			// Write the icon component to the directory.
+			return [
+				fs.writeFile(`./${outDir}/${componentName}.tsx`, content, "utf8"),
+			];
+		}),
+	);
 
-    // Write the `index` file that exports all of the icons for that style.
-    await fs.writeFile(
-        `${outDir}/index.tsx`,
+	// Write the `index` file that exports all of the icons for that style.
+	await fs.writeFile(
+		`${outDir}/index.tsx`,
 
-        `
+		`
 import React from "react";
         ${importAll(icons)}    
 
@@ -143,18 +139,18 @@ export const FlagsEnum: Record<FlagCode, React.FC<React.SVGProps<SVGSVGElement>>
 };
 
 `,
-        "utf8",
-    );
+		"utf8",
+	);
 };
 
 /**
  * Builds the icons and writes them to their directories.
  */
 const main = () => {
-    console.log("Building icons...");
-    Promise.all([rimrafPromisified("./src/flags/*")])
-        .then(() => Promise.all([buildIcons("src/flags")]))
-        .then(() => console.log("Finished building icons."));
+	console.log("Building icons...");
+	Promise.all([rimrafPromisified("./src/flags/*")])
+		.then(() => Promise.all([buildIcons("src/flags")]))
+		.then(() => console.log("Finished building icons."));
 };
 
 main();

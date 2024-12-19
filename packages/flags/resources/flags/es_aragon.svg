@@ -5,9 +5,9 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 13.3333H28V11.1333H0V13.3333Z" fill="#F63030"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17.8001H28V15.6001H0V17.8001Z" fill="#F63030"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4.39995H28V2.19995H0V4.39995Z" fill="#F63030"/>
-<path d="M5.48671 7.73964H11.6572V12.6498C11.6572 14.3537 10.2759 15.735 8.57196 15.735C6.86802 15.735 5.48671 14.3537 5.48671 12.6498V7.73964Z" stroke="white" stroke-width="1.38138"/>
-<rect x="4.8053" y="4.81433" width="7.54261" height="1.36013" fill="#FF9600"/>
-<rect x="7.88013" y="8.03198" width="1.39301" height="7.69723" fill="white"/>
+<path d="M5.48659 7.73964H11.6571V12.6498C11.6571 14.3537 10.2758 15.735 8.57184 15.735C6.8679 15.735 5.48659 14.3537 5.48659 12.6498V7.73964Z" stroke="white" stroke-width="1.38138"/>
+<rect x="4.80518" y="4.81433" width="7.54261" height="1.36013" fill="#FF9600"/>
+<rect x="7.87988" y="8.03198" width="1.39301" height="7.69723" fill="white"/>
 <rect x="11.7397" y="10.2711" width="1.39639" height="6.33575" transform="rotate(90 11.7397 10.2711)" fill="white"/>
 </g>
 <defs>

@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 20" aria-hidden="true">
   <g clip-path="url(#clip0_5_1633)">
     <rect width="28" height="20" fill="white" rx="2"/>
-    <rect width="14.6667" height="20" x="13.3333" fill="#F63030"/>
+    <rect width="14.6667" height="20" x="13.3334" fill="#F63030"/>
     <path fill="#0EA6FB" fill-rule="evenodd" d="M0 20H9.33333V0H0V20Z" clip-rule="evenodd"/>
-    <path fill="#FFDA27" fill-rule="evenodd" d="M9.33325 20H18.6666V0H9.33325V20Z" clip-rule="evenodd"/>
+    <path fill="#FFDA27" fill-rule="evenodd" d="M9.33337 20H18.6667V0H9.33337V20Z" clip-rule="evenodd"/>
   </g>
   <defs>
     <clipPath id="clip0_5_1633">

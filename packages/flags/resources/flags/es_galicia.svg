@@ -3,8 +3,8 @@
 <rect x="0.25" y="0.25" width="27.5" height="19.5" fill="white" stroke="white" stroke-width="0.5"/>
 <path d="M-0.0666504 -0.019165L28 20" stroke="#0EA6FB" stroke-width="4" stroke-linecap="round"/>
 <path d="M11.2666 7.41479H16.7335V11.4693C16.7335 12.9789 15.5097 14.2028 14.0001 14.2028C12.4904 14.2028 11.2666 12.9789 11.2666 11.4693V7.41479Z" fill="#0EA6FB"/>
-<rect x="11.2734" y="5.79712" width="5.46021" height="0.984619" fill="#F63030"/>
-<rect x="11.2734" y="4.8125" width="5.46021" height="0.984619" fill="#FFDA27"/>
+<rect x="11.2733" y="5.79712" width="5.46021" height="0.984619" fill="#F63030"/>
+<rect x="11.2733" y="4.8125" width="5.46021" height="0.984619" fill="#FFDA27"/>
 <rect x="13.4993" y="10" width="1.00842" height="2.87659" fill="#FFDA27"/>
 <rect x="13.4993" y="8.48547" width="1.00842" height="1.00696" rx="0.503479" fill="white"/>
 </g>
