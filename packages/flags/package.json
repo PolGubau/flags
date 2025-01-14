@@ -4,6 +4,10 @@
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+   "exports": {
+    "./flags/*": "./dist/flags/*",
+    ".": "./dist/index.js"
+  },
   "files": [
     "dist/"
   ],
