@@ -1,10 +1,10 @@
 {
   "name": "react-beauty-flags",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-   "exports": {
+  "exports": {
     "./flags/*": "./dist/flags/*",
     ".": "./dist/index.js"
   },
