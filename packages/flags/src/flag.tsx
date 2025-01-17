@@ -5,6 +5,7 @@ interface FlagProps extends React.SVGProps<SVGSVGElement> {
 	code: FlagCode;
 	size?: number;
 }
+
 export const Flag = ({ code, size, ...props }: FlagProps) => {
 	const Component = FlagsEnum[code];
 	return (
